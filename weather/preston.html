@@ -39,9 +39,6 @@
     </header>
 
 
-
-
-
     <nav class="mobile-container">
 
       <!-- ****************************** Hamburger menu html-->
@@ -76,12 +73,8 @@
       <h2>Preston, Idaho</h2>
 
       <div class="herodiv">
-
-        <picture class="hero-pic">
-          <img src="images/scene.jpg" alt="hero image">
-        </picture>
-  
-        <section class="stats">
+        <div class="hero-image"></div>
+        <section class="stat-summary">
           <h3 id="h3-stats">Weather Summary</h3>
           <hr id="hr-stats"/>
           <p class="p-stats">Currently: <span id="cover">test</span></p>
@@ -90,18 +83,90 @@
           <p class="p-stats">Humidity: <span id="humidity">test</span></p>
           <p class="p-stats">Wind Speed: <span id="windSpeed">test</span></p>
         </section>
-      </div>      
+      </div>
 
-      <div class="content-box">5 Day Forecast</div>
+      <h2 class="h2-2">5 Day Forecast</h2>
+      <div class="flex">
+        <div class="flex-col">
+          <span class="col-head">Monday</span>
+          <img src="images/sunny9.png" alt="weather!">
+          <span class="data">78 °F</span>
+        </div>
+        <div class="flex-col">
+          <span class="col-head">Tuesday</span>
+          <img src="images/sunny9.png" alt="weather!">
+          <span class="data">80 °F</span>
+        </div>
+        <div class="flex-col">
+          <span class="col-head">Wednesday</span>
+          <img src="images/cloudy9.png" alt="weather!">
+          <span class="data">71 °F</span>
+        </div>
+        <div class="flex-col">
+          <span class="col-head">Thursday</span>
+          <img src="images/rainy9.png" alt="weather!">
+          <span class="data">69 °F</span>
+        </div>
+        <div class="flex-col">
+          <span class="col-head">Friday</span>
+          <img src="images/rainy99.png" alt="weather!">
+          <span class="data">65 °F</span>
+        </div>
+      </div>
+   
+      
 
-      <div class="content-box">Article</div>
+      <div class="content-box" id="box-rodeo"><h2 class="h2-rodeo">The Famous Preston Night Rodeo</h2>
+        <img class="rodeo" src="images/rodeo.jpg" alt="rodeo">
+        <h3 class="h3-rodeo">Press Release</h3>
+        <p class="p-rodeo">That Famous Preston Night Rodeo started in 1934 and has 
+        been going every year since! The rodeo offers wholesome 
+        entertainment that attracts world champion cowboys and cowgirls 
+        and the best crowds because of the high quality of rodeo.</p>
+        
+        <p class="p-rodeo">July 30th, Preston, Idaho.<br><br>
 
-      <div class="content-box">Contact Information</div>
+          That Famous Preston Night Rodeo was awarded Large Rodeo of the 
+          Year in Idaho for the Wilderness Circuit! <br><br>
+
+          This award is a great honor and is voted on by the cowboys.  
+          It is based on their overall experience at the rodeo, our production, 
+          our arena, and our hospitality.  This is the third year we have 
+          received this award.  In 2013, it was for Best Small Rodeo in 
+          Idaho, but we increased our purse to move us into the big rodeo 
+          status, so 2014 and 2015, we won Best Large Rodeo.  What a great 
+          honor for our event!!!<br><br>
+
+          We have been Best Large Rodeo in Idaho for the Wilderness Circuit 
+          for 2013. 2014. 2015, runner-up in 2016 and we have received awards 
+          for arena dirt at the NFR in Vegas every year for the past 6 years!<br> <br>
+
+        If you'd like more information go to: <br><br><a href="https://www.prestonrodeo.com/" target="_blank">
+          That Famous Preston Night Rodeo</a></p>
+         
+      </div>
+
+      <div class="content-box" id="contact-box">
+        <div id="map-box">
+        <a href="https://www.google.com/maps/@42.0965697,-111.8727673,16.25z" target="_blank">
+        <img class="map" src="images/map.png" alt="map">
+        </a> </div>
+
+        <div id="address-box">
+        <h3 class="h3-contact">Contact Us</h3>
+        <p>
+        271 West Main Street<br>
+        Preston, Idaho 87301<br><br>
+        phone: 208-555-1212  <br>
+        email: <a href="mailto:scottlefoll@gmail.com">Up Front Weather</a>.<br>
+        </p></div>
+      
+      </div>
 
     </main>
 
     <footer>
-      <p class="p-footer">        
+      <p class="p-footer">
         <span
           >Ⓒ<a href="weather.html"
             >UpFrontWeather.com</a
