@@ -207,7 +207,7 @@ img {
 }
 
 
-footer {
+.footer {
 	background-color: #2191FB;
 	color: yellow;
 	font-family: "Montserrat", "Sansita", Ubuntu, sans-serif;
@@ -215,6 +215,22 @@ footer {
 	display: flex;
 	position: relative;
 	top: -6rem;
+	flex-flow: column;
+	align-items: center;
+	justify-content: center;
+	padding: .75rem;
+	border: 1px solid rgba(0, 0, 0, 0.2);
+	box-shadow: 0 0 0.5rem rgba(0, 0, 0, 0.2);
+}
+
+.footer2 {
+	background-color: #2191FB;
+	color: yellow;
+	font-family: "Montserrat", "Sansita", Ubuntu, sans-serif;
+	font-size: .75rem;
+	display: flex;
+	position: relative;
+	top: -5rem;
 	flex-flow: column;
 	align-items: center;
 	justify-content: center;
