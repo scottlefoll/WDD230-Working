@@ -391,7 +391,7 @@ p {
 	font-size: .85rem;
 	text-align: left;
 	left: .35rem;
-	align-items: left;
+	/* align-items: left; */
 	justify-content: left;
 }
 
@@ -533,7 +533,7 @@ ul {
 		font-size: 1rem;
 		text-align: left;
 		justify-content: left;
-		align-items: left;
+		/* align-items: left; */
 		margin-top: 5vh;
 	}
 
@@ -671,7 +671,7 @@ ul {
 		left: .25rem;
 		font-size: .85rem;
 		text-align: left;
-		align-items: left;
+		/* align-items: left; */
 		justify-content: left;
 		}
 
@@ -821,7 +821,7 @@ ul {
 		left: .25rem;
 		font-size: 1rem;
 		text-align: left;
-		align-items: left;
+		/* align-items: left; */
 		justify-content: left;
 		}
 
