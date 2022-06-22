@@ -270,16 +270,13 @@ header {
 	font-weight: 900;
 }
 
-.herodiv {
+.hero-container {
 	display: block;
-	border: none;
-	width: 100%;
-	height: 100%;
 	margin: 0 0 2rem 0;
-	/* padding: 1rem; */
+	border: none
+	padding: 1rem;
 	width: 100%;
 }
-
 
 .hero-image {
 	background-image: url("../images/scene.jpg"); /* The image used */
@@ -451,8 +448,13 @@ ul {
 	margin-right: 0;
 }
 
+
 .weather-container {
-	margin: 0 auto;
+	display: block;
+	margin: 0 0 2rem 0;
+	border: none
+	padding: 1rem;
+	width: 100%;
 }
 
 /* Tablet Views ******************************/
@@ -471,11 +473,6 @@ ul {
 		padding-top: 5vh;
 	}
 
-	.map-box {
-		/* align-items: center; */
-		/* justify-content: center; */
-	}
-
 	.map {
 		padding-top: 5vh;
 	}
@@ -485,7 +482,7 @@ ul {
 	}
 
 	body {
-		font-size: .75rem;
+		font-size: .95rem;
 	}
 
 	footer {
@@ -580,11 +577,6 @@ ul {
 		font-size: .95rem;
 		}
 
-	/* .active {
-		background-color:  #2191FB;
-		color: white;
-		} */
-
 	.stat-summary {
 		height: 11rem;
 		top: 18.5rem;
@@ -648,8 +640,9 @@ ul {
 
 	.hero-container {
 		font-size: 1.1rem;
-		width: 100%;
-		height: 100%;
+		margin-left: 13vw;
+		margin-right: 13vw;
+		width: 74vw;
 	}
 
 	h2 {
@@ -684,6 +677,12 @@ ul {
 		margin-left: 4rem;
 		margin-right: 4rem;
 	}
+}
+
+.weather-container {
+	margin-left: 13vw;
+	margin-right: 13vw;
+	width: 74vw;
 }
 
 
