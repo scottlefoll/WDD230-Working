@@ -101,7 +101,7 @@ body {
 	grid-gap: .5rem;
 	grid-template-columns: 1fr;
 	background-color: #ACCBE1;
-	top: -10rem;
+	top: -6rem;
 	height: 30vh;
 	margin-bottom: 2rem;
 }
@@ -214,7 +214,7 @@ img {
 	font-size: .75rem;
 	display: flex;
 	position: relative;
-	top: -14rem;
+	top: -6rem;
 	flex-flow: column;
 	align-items: center;
 	justify-content: center;
@@ -545,11 +545,18 @@ ul {
 		font-size: .95rem;
 	}
 
-	.footer {
+	.content-box {
+		margin-left: 0;
+		margin-right: 0;
+		width: 100%;
+	}
+
+	.footer3 {
 		top: -14rem;
 		font-size: .95rem;
 	}
 
+	
 	footer p {
 		flex-direction: row;
 	}
@@ -751,22 +758,30 @@ ul {
 		width: 74vw;
 	}
 
-	.content-box {
+	/* .content-box {
 		font-size: 1.15rem;
 		margin-left: 13vw;
 		margin-right: 13vw;
 		width: 74vw;
-	}
+	} */
 
-	.footer {
+	.footer3 {
 		width: 74vw;
 		margin-left: 13vw;
 		margin-right: 13vw;
 		border-radius: 3px;
-		font-size: .95rem;
+		font-size: 1.15rem;
 	}
 
-	
+	.footer2 {
+		width: 74vw;
+		margin-left: 13vw;
+		margin-right: 13vw;
+		border-radius: 3px;
+		font-size: 1.15rem;
+		top: 5rem;
+	}
+
 	.headings h1 {
 		font-size: 3rem;
 	}
@@ -810,6 +825,13 @@ ul {
 		justify-content: left;
 		}
 
+	#rodeo-box {
+		font-size: 1.15rem;
+		margin-left: 13vw;
+		margin-right: 13vw;
+		width: 74vw;
+	}
+
 
 	.stat-summary {
 		display: block;
@@ -833,6 +855,14 @@ ul {
 		width: 60vw;
 	}
 
+	.weather-container2 {
+		width: 76vw;
+		margin-left: 12vw;
+		margin-right: 14vw;
+		border-radius: 3px;
+		font-size: 1.15rem;
+		top: 5rem;
+	}
 }
 
 /* Xtra Lage Desktop Views ****************************/
