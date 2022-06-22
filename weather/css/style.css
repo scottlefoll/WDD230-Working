@@ -207,14 +207,14 @@ img {
 }
 
 
-.footer {
+.footer3 {
 	background-color: #2191FB;
 	color: yellow;
 	font-family: "Montserrat", "Sansita", Ubuntu, sans-serif;
 	font-size: .75rem;
 	display: flex;
 	position: relative;
-	top: -13rem;
+	top: -14rem;
 	flex-flow: column;
 	align-items: center;
 	justify-content: center;
