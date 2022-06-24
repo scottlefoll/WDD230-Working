@@ -11,6 +11,7 @@ const currentDate = new Date();
 const options = { weekday: 'long', day: 'numeric', month: 'short', year: 'numeric'};
 document.getElementById('date-time').innerHTML=currentDate.toLocaleDateString('en-uk', options);
 
+
 function myFunction() {
   var x = document.getElementById("myLinks");
   if (x.style.display === "block") {
@@ -20,6 +21,7 @@ function myFunction() {
   }
 }
 
+
 function popup(mylink, windowname) { 
     if (! window.focus)return true;
     var href;
@@ -27,25 +29,7 @@ function popup(mylink, windowname) {
     else href=mylink.href; 
     window.open(href, windowname, 'width=300,height=500,scrollbars=no,resizable=no,left=600,top=300'); 
     return false; 
-  }
-
-  
-// <!--Start of Tawk.to Script-->
-
-var Tawk_API=Tawk_API||{}, 
-    Tawk_LoadStart=new Date();
-  (function(){
-    var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
-    s1.async=true;
-    s1.src='https://embed.tawk.to/62a46c3eb0d10b6f3e76ce03/1g594dkt6';
-    s1.charset='UTF-8';
-    s1.setAttribute('crossorigin','*');
-    s0.parentNode.insertBefore(s1,s0);
-  })();
-
-// End of Tawk.to Script-->
-
-
+  } 
 
 var myIndex = 0;
 carousel();

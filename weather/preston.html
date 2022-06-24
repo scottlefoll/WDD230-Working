@@ -23,11 +23,8 @@
   </head>
 
   <body class="weather-content">
-    <div class="top-message-box">
-      <p class="top-message">Saturday: Preston Pancakes in the Park!<br>
-        9:00 am Saturday, 6/25, in Preston Community Park.
-      </p>
-    </div>
+   
+    <div id="topDIV" style="padding:16px;background-color:lightgray"></div>
 
     <header>
       <div class="logo">
@@ -215,8 +212,38 @@
           x.style.display = "block";
         }
       }
-      </script>
+    </script>
 
+    <script>
+
+
+    </script>
+
+
+  
+    <script>
+    // Get Date
+    const d = new Date();
+    // Get Day of week as int; Friday = 5
+    let day = d.getDay()
+    const para = document.createElement("p");
+    para.innerHTML = "Saturday: Preston Pancakes in the Park!<br> 9:00 am Saturday, 6/25, in Preston Community Park.";
+    
+    // Append to the top banner element:
+    document.getElementById("topDIV").appendChild(para);
+
+    //If day = 5 show ad, otherwise hide it.
+    if (day === 5) {
+      document.getElementById("topDIV").style.display = "block";
+      } else {
+        document.getElementById("topDIV").style.display = "none";
+      }
+    document.getElementById("topDIV").style.backgroundColor="yellow";
+    document.getElementById("topDIV").style.fontWeight="bold";
+    document.getElementById("topDIV").style.fontSize=".95rem";
+    </script>
+
+  
     <script src="js/script.js"></script>
   </body>
 </html>
