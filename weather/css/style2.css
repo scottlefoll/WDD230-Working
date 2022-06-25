@@ -400,6 +400,7 @@ p {
 
 
 
+
 #rodeo-box {
 	background-color: #ACCBE1;
 	display: block;
@@ -671,6 +672,7 @@ ul {
 		justify-content: left;
 		}
 
+    
 	.rodeo {
 			width: 300px;
 			height: 200px;
@@ -840,10 +842,10 @@ ul {
 		font-size: 1rem;
 		text-align: left;
 		justify-content: left;
-		position: relative;
-		padding-right: 0;
-	}
-	
+        position: relative;
+        padding-right: 0;
+    }
+
 
 	#rodeo-box {
 		font-size: 1.15rem;
@@ -898,8 +900,3 @@ ul {
 		margin-right: 8rem;
 	}
 }
-
-
-
-
-
