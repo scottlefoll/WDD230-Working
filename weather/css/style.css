@@ -392,9 +392,10 @@ p {
 	position: relative;
 	height: .5rem;
 	padding: .70rem;
+	padding-left: .25rem;
+	padding-right: 0;
 	font-size: .85rem;
-	/* text-align: left; */
-	left: 24vw;
+	left: 30%;
 }
 
 
