@@ -78,15 +78,19 @@
       <div class="hero-container">
         <div class="hero-div">
           <div class="hero-image"></div>
-          <section class="stat-summary">
-            <h3 id="h3-stats">Weather Summary</h3>
-            <hr id="hr-stats"/>
-            <p class="p-stats">Currently: <span id="cover">sunny</span></p>
-            <p class="p-stats">High: <span id="temp">81 °F</span></p>
-            <p class="p-stats">Wind Chill: <span id="windChill">78 °F</span></p>
-            <p class="p-stats">Humidity: <span id="humidity">61%</span></p>
-            <p class="p-stats">Wind Speed: <span id="windSpeed">7 mph</span></p>
-          </section>
+
+            <div class="stat-summary-container">
+              <section class="stat-summary">
+                <h3 id="h3-stats">Weather Summary</h3>
+                <hr id="hr-stats"/>
+                <p class="p-stats">Currently: <span id="cover">sunny,</span><span id="temp">49</span><span id="temp">°F</span></p></p>
+                <p class="p-stats">Wind Chill: <span id="windChill"></span></p>
+                <p class="p-stats">High: <span id="temp">55 °F</span></p>
+                <p class="p-stats">Humidity: <span id="humidity">41%</span></p>
+                <p class="p-stats">Wind Speed: <span id="windSpeed">12</span><span>mph</span></p>
+              </section>
+            </div>
+
         </div>
       </div>
       
@@ -125,7 +129,7 @@
       
 
       <div class="content-box" id="rodeo-box"><h2 class="h2-rodeo">The Famous Preston Night Rodeo</h2>
-        <img class="rodeo" src="images/rodeo.jpg" alt="rodeo">
+        <img class="rodeo-pic" src="images/rodeo.jpg" alt="rodeo">
         <h3 class="h3-rodeo">Press Release</h3>
         <p class="p-rodeo">That Famous Preston Night Rodeo started in 1934 and has 
         been going every year since! The rodeo offers wholesome 
@@ -196,12 +200,12 @@
       </p>
     </footer>
 
-    <script> 
+    <script>
       let dt = new Date();
       const currentDate = new Date();
       const options = { weekday: 'long', day: 'numeric', month: 'short', year: 'numeric'};
       document.getElementById('date-time').innerHTML=currentDate.toLocaleDateString('en-uk', options);
-    </script>
+    </script>    
 
     <script>
       function myFunction() {
@@ -215,36 +219,42 @@
     </script>
 
     <script>
+      // Get Date
+      const d = new Date();
+      // Get Day of week as int; Friday = 5
+      let day = d.getDay()
+      const para = document.createElement("p");
+      para.innerHTML = "Saturday: Preston Pancakes in the Park!<br> 9:00 am Saturday, 6/25, in Preston Community Park.";
+      
+      // Append to the top banner element:
+      document.getElementById("topDIV").appendChild(para);
 
-
+      //If day = 5 show ad, otherwise hide it.
+      if (day === 6) {
+        document.getElementById("topDIV").style.display = "block";
+        } else {
+          document.getElementById("topDIV").style.display = "none";
+        }
+      document.getElementById("topDIV").style.backgroundColor="yellow";
+      document.getElementById("topDIV").style.fontWeight="bold";
+      document.getElementById("topDIV").style.fontSize=".95rem";
     </script>
 
+    <script>  
+      var ws = document.getElementById("windSpeed").textContent;
+      var temp = document.getElementById("temp").textContent;
+      var windChill = 0;
 
-  
-    <script>
-    // Get Date
-    const d = new Date();
-    // Get Day of week as int; Friday = 5
-    let day = d.getDay()
-    const para = document.createElement("p");
-    para.innerHTML = "Saturday: Preston Pancakes in the Park!<br> 9:00 am Saturday, 6/25, in Preston Community Park.";
-    
-    // Append to the top banner element:
-    document.getElementById("topDIV").appendChild(para);
-
-    //If day = 5 show ad, otherwise hide it.
-    if (day === 5) {
-      document.getElementById("topDIV").style.display = "block";
-      } else {
-        document.getElementById("topDIV").style.display = "none";
-      }
-    document.getElementById("topDIV").style.backgroundColor="yellow";
-    document.getElementById("topDIV").style.fontWeight="bold";
-    document.getElementById("topDIV").style.fontSize=".95rem";
+      if (ws > 3 && temp <script 50) {
+          windChill = 35.74 + 0.6215 * temp - 35.75 * Math.pow(ws, 0.16) + 0.4275 * temp * Math.pow(ws, 0.16);
+          document.getElementById('windChill').textContent=Math.round(windChill).toString() + "°F";
+        } else {
+          document.getElementById('windChill').textContent="N/A";
+        }
     </script>
 
-  
     <script src="js/script.js"></script>
+    <script src="js/windchill.js"></script>
   </body>
 </html>
 

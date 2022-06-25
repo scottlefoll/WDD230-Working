@@ -286,7 +286,8 @@ header {
 
 
 .hero-image {
-	background-image: url("../images/scene.jpg"); /* The image used */
+	/* background-image: url("../images/scene.jpg");  */
+	background-image: url("../images/franklin400.jpg"); /* The image used */
 	background-color: #cccccc; /* Used if the image is unavailable */
 	height: 200px; /* You must set a specified height */
 	width: 100%;
@@ -380,7 +381,7 @@ nav ul {
 	}
 
 p {
-	padding: .625rem;
+	/* padding: .625rem; */
 	line-height: 125%;
   }
 .p-rodeo {
@@ -396,19 +397,20 @@ p {
 	left: 24vw;
 }
 
-.rodeo {
-	width: 250px;
-	height: 150px;
-	padding: 15px;
-	float: right
-	
-}
+
 
 #rodeo-box {
 	background-color: #ACCBE1;
 	display: block;
 	position: relative;
 	margin-top: 1rem;
+}
+
+.rodeo-pic {
+	width: 200px;
+	height: 150px;
+	padding: 15px;
+	float: right
 }
 
 span {
@@ -421,7 +423,7 @@ span {
 	position: relative;
 	text-align: left;
 	color: yellow;
-	height: 10.5rem;
+	height: 12.5rem;
 	width: 100%;
 	left: 0;
 	top: 0;
@@ -573,6 +575,12 @@ ul {
 		height: 400px; /* You must set a specified height */
 	  }	
 
+	.hero-image {
+		/* background-image: url("../images/scene.jpg");  */
+		background-image: url("../images/franklin800.jpg"); /* The image used */
+		height: 400px; /* You must set a specified height */
+	}
+
 	.logo img {
 		width: 6rem;
 		height: auto;
@@ -676,6 +684,13 @@ ul {
 			position: relative;
 			top: -14rem;
 		}
+
+	.rodeo-pic {
+		width: 250px;
+		height: 188px;
+		padding: 15px;
+		float: right
+	}
 
 	.stat-summary {
 		display: block;
@@ -795,6 +810,13 @@ ul {
 		height: 500px; /* You must set a specified height */
 	  }
 
+	.hero-image {
+		/* background-image: url("../images/scene.jpg");  */
+		background-image: url("../images/franklin1200.jpg"); /* The image used */
+		height: 500px; /* You must set a specified height */
+	}
+
+
 	h2 {
 		font-size: 2.25rem;	
 	}
@@ -829,6 +851,12 @@ ul {
 		width: 74vw;
 	}
 
+	.rodeo-pic {
+		width: 300px;
+		height: 225px;
+		padding: 15px;
+		float: right
+	}
 
 	.stat-summary {
 		display: block;
