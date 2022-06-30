@@ -33,3 +33,34 @@ if (day === 6 || day === 5) {
 document.getElementById("topDIV").style.backgroundColor="yellow";
 document.getElementById("topDIV").style.fontWeight="bold";
 document.getElementById("topDIV").style.fontSize=".95rem";
+
+// lazy loading - load after rendering HTML
+let imagesToLoad = document.querySelectorAll('img[data-src]');
+const loadImages = (image) => {
+  image.setAttribute('src', image.getAttribute('data-src'));
+  image.onload = () => {
+    image.removeAttribute('data-src');
+  };
+};
+
+
+// lazy loading - wait until image is actually called l_replace = [s.replace('XXX', 'ZZZ') for s in l]
+
+if('IntersectionObserver' in window) {
+  const observer = new IntersectionObserver((items, observer) => {
+    items.forEach((item) => {
+      if(item.isIntersecting) {
+        loadImages(item.target);
+        observer.unobserve(item.target);
+      }
+    });
+  });
+  imagesToLoad.forEach((img) => {
+    observer.observe(img);
+  });
+} else {
+  imagesToLoad.forEach((img) => {
+    loadImages(img);
+  });
+}
+
