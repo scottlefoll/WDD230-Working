@@ -1050,11 +1050,11 @@ ul {
 		grid-column: 2;
 		position: relative;
 		border: none;
-		padding-bottom: 1rem;
+		/* padding-bottom: 1rem; */
 		justify-content: center;
 		font-style: italic;
 		font-size: 0.85rem;
-		height: 300px;
+		height: auto;
 		width: 100%;
 		background-color: #cccccc;
 	}
@@ -1064,11 +1064,11 @@ ul {
 		grid-column: 3;
 		position: relative;
 		border: none;
-		padding-bottom: 1rem;
+		/* padding-bottom: 1rem; */
 		justify-content: center;
 		font-style: italic;
 		font-size: 0.85rem;
-		height: 300px;
+		height: auto;
 		width: 100%;
 		background-color: #cccccc;
 	}
@@ -1077,10 +1077,9 @@ ul {
 		Display: block;
 		position: absolute;
 		font-weight: 600;
-		left: 1rem;
+		left: 0;
 		text-align: left;
-		padding-left: 2rem;
-		bottom: 2rem;
+		bottom: 1rem;
 	}
 	
 	.gallery-h2 {
@@ -1099,6 +1098,7 @@ ul {
 		width: 100%;
 		
 	}
+
 
 	.headings h1 {
 		font-size: 3rem;
@@ -1164,13 +1164,6 @@ ul {
 		width: 74vw;
 	}
 	.rodeo-pic {
-		width: 300px;
-		height: 225px;
-		padding: 15px;
-		float: right
-	}
-
-	.gallery-pic {
 		width: 300px;
 		height: 225px;
 		padding: 15px;
