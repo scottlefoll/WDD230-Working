@@ -54,15 +54,19 @@
 	color: white;
   }
   
- .gallery-pic[data-src] {
+ /* .gallery-pic[data-src] {
 	filter: blur(0.2em);
-  }
+  } */
   
-  .gallery-pic {
-	filter: blur(0em);
+  /* .gallery-pic {
+	filter: blur(2px) grayscale(75%);
 	transition: filter 0.5s;
   }
-  
+   */
+  /* hover effect */
+.gallery-pic:hover {box-shadow: 0 0 50px #333;}
+
+
 /* phone or baseline views **************************/
 
 
@@ -347,6 +351,7 @@ footer p span:not(:last-child)::after {
 
 
 .gallery-fig {
+	Display: none;
 	position: relative;
 	font-weight: 600;
 	padding-left: 1rem;
@@ -735,6 +740,7 @@ ul {
 	}
 
 	.gallery-fig {
+		Display: none;
 		position: absolute;
 		font-weight: 600;
 		left: 0;
@@ -1068,6 +1074,7 @@ ul {
 	}
 
 	.gallery-fig {
+		Display: block;
 		position: absolute;
 		font-weight: 600;
 		left: 1rem;
