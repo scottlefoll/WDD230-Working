@@ -106,6 +106,17 @@ body {
 	margin-bottom: 2rem;
 }
 
+.contact-container-gallery {
+	display: grid;
+	position: relative;
+	grid-gap: .5rem;
+	grid-template-columns: 1fr;
+	background-color: #ACCBE1;
+	height: 30vh;
+	margin-top: 2rem;
+	margin-bottom: 2rem;
+}
+
 .content-box {
 	display: block;
 	margin: 0 0 2rem 0;
@@ -127,6 +138,18 @@ body {
 	padding: 1rem;
 	background-color: #eee;
 	color: #444;
+	width: 100%;
+}
+
+.content-box-gallery {
+	display: block;
+	margin: 0 0 2rem 0;
+	border: none;
+	padding: 1rem;
+	background-color: #eee;
+	color: #444;
+	font-style: italic;
+	font-size: 0.85rem;
 	width: 100%;
 }
 
@@ -266,12 +289,81 @@ footer p span:not(:last-child)::after {
 	content: " 🌧️\00a0";
 }
 
+.gallery-container {
+	display: grid;
+	grid-template-columns: 1fr;
+	position: relative;
+	grid-gap: .5rem;
+	background-color: white;
+}
+
+.gallery-content-box1 {
+	display: grid;
+	grid-column: 1;
+	position: relative;
+	margin: 0 0 1rem 0;
+	border: none;
+	padding-bottom: 1rem;
+	font-style: italic;
+	font-size: 0.85rem;
+	width: 100%;
+	background-color: #CCCCCC;
+}
+
+.gallery-content-box2 {
+	display: grid;
+	grid-column: 1;
+	position: relative;
+	margin: 0 0 1rem 0;
+	border: none;
+	padding-bottom: 1rem;
+	font-style: italic;
+	font-size: 0.85rem;
+	width: 100%;
+	background-color: #CCCCCC;
+}
+
+.gallery-content-box3 {
+	display: grid;
+	grid-column: 1;
+	position: relative;
+	margin: 0 0 1rem 0;
+	border: none;
+	padding-bottom: 1rem;
+	font-style: italic;
+	font-size: 0.85rem;
+	width: 100%;
+	background-color: #CCCCCC;
+}
+
+
+.gallery-fig {
+	position: relative;
+	font-weight: 600;
+	padding-left: 1rem;
+	width: 100%;
+}
+
 .gallery-h2 {
 	font-size: 1.5rem;
 	display: block;
 	position: relative;
 	margin: 0 auto;
 	top: 1rem;
+}
+
+/* #gallery-pic-box1 {
+	background-color: #ACCBE1;
+	display: block;
+	position: relative;
+	margin-top: 1rem;
+} */
+
+.gallery-pic {
+	width: 100%;
+	height: 200px;
+	padding: 15px;
+	/* float: right; */
 }
 
 header {
@@ -571,8 +663,9 @@ ul {
 	}
 
 	.footer3 {
-		top: -14rem;
+		top: 0;
 		font-size: .95rem;
+		margin-top: 1rem;
 	}
 
 	
@@ -583,7 +676,79 @@ ul {
 	footer p span:not(:last-child)::after {
 		content: " 🌧️\00a0";
 	}
+	
+	.gallery-container {
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+		position: relative;
+		grid-gap: .5rem;
+		background-color: white;
+	}
+	
+	.gallery-content-box1 {
+		display: flex;
+		grid-column: 1;
+		position: relative;
+		margin: 0 0 1rem 0;
+		border: none;
+		justify-content: center;
+		font-style: italic;
+		font-size: 0.85rem;
+		width: 100%;
+		background-color: #cccccc;
+	}
+	
+	.gallery-content-box2 {
+		display: flex;
+		grid-column: 2;
+		position: relative;
+		border: none;
+		padding-bottom: 1rem;
+		justify-content: center;
+		font-style: italic;
+		font-size: 0.85rem;
+		width: 100%;
+		background-color: #cccccc;
+	}
+	
+	.gallery-content-box3 {
+		display: flex;
+		grid-column: 1/3;
+		position: relative;
+		border: none;
+		padding-bottom: 1rem;
+		justify-content: center;
+		font-style: italic;
+		font-size: 0.85rem;
+		width: 100%;
+		background-color: #cccccc;
+	}
 
+	.gallery-fig {
+		position: absolute;
+		font-weight: 600;
+		left: 0;
+		text-align: left;;
+		padding-left: 2rem;
+		bottom: 1rem;
+	}
+	
+	.gallery-h2 {
+		font-size: 1.5rem;
+		display: block;
+		position: relative;
+		margin: 0 auto;
+		top: 1rem;
+	}
+	
+	.gallery-pic {
+		display: block;
+		position: relative;
+		margin: 1rem auto;
+		width: 100%;
+		height: 200px;
+	}
+	
 	h2 {
 		font-size: 1.5rem;
 	}
@@ -715,6 +880,13 @@ ul {
 			top: -14rem;
 		}
 
+	#rodeo-box2 {
+		background-color: #ACCBE1;
+		display: block;
+		position: relative;
+		top: -14rem;
+	}
+
 	.rodeo-pic {
 		width: 250px;
 		height: 188px;
@@ -773,7 +945,7 @@ ul {
 		top: -12rem;
 	}
 
-	.weather-container7 {
+	/* .weather-container7 {
 		display: grid;
 		grid-template-columns: 1fr 1fr;
 		position: relative;
@@ -785,7 +957,7 @@ ul {
 		margin-right: 20vw;
 		width: 60vw;
 		top: 4rem;
-	}
+	} */
 	
 
 }
@@ -807,6 +979,15 @@ ul {
 	}
 
 	.contact-container {
+		grid-template-columns: 2fr;
+		height: 350px;
+		font-size: 1.15rem;
+		margin-left: 13vw;
+		margin-right: 13vw;
+		width: 74vw;
+	}
+
+	.contact-container-gallery {
 		grid-template-columns: 2fr;
 		height: 350px;
 		font-size: 1.15rem;
@@ -837,6 +1018,79 @@ ul {
 		border-radius: 3px;
 		font-size: 1.15rem;
 		top: 5rem;
+	}
+
+
+	.gallery-container {
+		display: grid;
+		grid-template-columns: 1fr 1fr 1fr;
+		position: relative;
+		grid-gap: .5rem;
+		background-color: white;
+	}
+	
+	.gallery-content-box1 {
+		display: flex;
+		grid-column: 1;
+		position: relative;
+		margin: 0 0 1rem 0;
+		border: none;
+		justify-content: center;
+		font-style: italic;
+		font-size: 0.85rem;
+		width: 100%;
+		background-color: #cccccc;
+	}
+	
+	.gallery-content-box2 {
+		display: flex;
+		grid-column: 2;
+		position: relative;
+		border: none;
+		padding-bottom: 1rem;
+		justify-content: center;
+		font-style: italic;
+		font-size: 0.85rem;
+		width: 100%;
+		background-color: #cccccc;
+	}
+
+	.gallery-content-box3 {
+		display: flex;
+		grid-column: 3;
+		position: relative;
+		border: none;
+		padding-bottom: 1rem;
+		justify-content: center;
+		font-style: italic;
+		font-size: 0.85rem;
+		width: 100%;
+		background-color: #cccccc;
+	}
+
+	.gallery-fig {
+		position: absolute;
+		font-weight: 600;
+		left: 0;
+		text-align: left;;
+		padding-left: 2rem;
+		bottom: 1rem;
+	}
+	
+	.gallery-h2 {
+		font-size: 1.5rem;
+		display: block;
+		position: relative;
+		margin: 0 auto;
+		top: 1rem;
+	}
+	
+	.gallery-pic {
+		display: block;
+		position: relative;
+		margin: 1rem auto;
+		width: 100%;
+		height: 200px;
 	}
 
 	.headings h1 {
@@ -896,7 +1150,20 @@ ul {
 		width: 74vw;
 	}
 
+	#rodeo-box2 {
+		font-size: 1.15rem;
+		margin-left: 13vw;
+		margin-right: 13vw;
+		width: 74vw;
+	}
 	.rodeo-pic {
+		width: 300px;
+		height: 225px;
+		padding: 15px;
+		float: right
+	}
+
+	.gallery-pic {
 		width: 300px;
 		height: 225px;
 		padding: 15px;
