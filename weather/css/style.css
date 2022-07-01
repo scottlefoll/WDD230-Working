@@ -1,3 +1,5 @@
+/* phone or baseline views **************************/
+
 @charset "UTF-8"; /* not necessary */
 
 @font-face {
@@ -65,9 +67,6 @@
    */
   /* hover effect */
 .gallery-pic:hover {box-shadow: 0 0 50px #333;}
-
-
-/* phone or baseline views **************************/
 
 
 * {
