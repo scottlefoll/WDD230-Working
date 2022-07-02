@@ -277,13 +277,13 @@ form label.sbs {
     font-size: 1.15rem;
 }
 
-.footer2 {
+/* .footer2 {
     width: 74vw;
     margin-left: 13vw;
     margin-right: 13vw;
     border-radius: 3px;
     font-size: 1.15rem;
     top: 5rem;
-}
+} */
 
 } /* end of media query */

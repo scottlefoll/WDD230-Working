@@ -497,6 +497,19 @@ ul {
 	top: 4rem;
 }
 
+.weather-container-storm {
+	display: block;
+	position: relative;
+	margin: 0 0 2rem 0;
+	border: none;
+	padding: 1rem;
+	width: 80%;
+	margin-left: 20vw;
+	margin-right: 20vw;
+	width: 60vw;
+	top: 4rem;
+}
+
 .weather-container7 {
 	display: grid;
 	position: relative;
@@ -625,6 +638,7 @@ form fieldset {
     margin: 2rem 0;
     border: 1px solid #445ba9;
     border-radius: 10px;
+	min-width: 240px;
     padding: .5rem;
 }
 
@@ -759,6 +773,24 @@ footer {
 }
 
 .footer2 {
+	background-color: #2191FB;
+	color: yellow;
+	font-family: "Montserrat", "Sansita", Ubuntu, sans-serif;
+	font-size: .75rem;
+	display: flex;
+	position: relative;
+	top: 12rem;
+	flex-flow: column;
+	align-items: center;
+	justify-content: center;
+	padding: .75rem;
+	border: 1px solid rgba(0, 0, 0, 0.2);
+	box-shadow: 0 0 0.5rem rgba(0, 0, 0, 0.2);
+	margin-top: 2rem;
+	padding-top: 2rem;
+}
+
+.footer-storm {
 	background-color: #2191FB;
 	color: yellow;
 	font-family: "Montserrat", "Sansita", Ubuntu, sans-serif;
