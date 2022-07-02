@@ -574,13 +574,13 @@ header h2 {margin: 0;
            padding: 2rem;       
 }
 
-/* h2 {
+h2 {
 	font-size: 1rem;
 	font-weight: 900;
 	text-align: center;
 	color: black;
 	padding: 2rem;
-} */
+}
 
 /*----------- NAVIGATION --------------*/
 nav {

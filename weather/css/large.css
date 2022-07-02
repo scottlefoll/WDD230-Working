@@ -31,13 +31,25 @@
 		width: 74vw;
 	}
 
-	/* .content-box {
-		font-size: 1.15rem;
+
+	.footer2 {
+		width: 74vw;
 		margin-left: 13vw;
 		margin-right: 13vw;
-		width: 74vw;
-	} */
+		border-radius: 3px;
+		font-size: 1.15rem;
+		top: 5rem;
+	}
 
+
+	.footer-storm {
+		max-width: 74vw;
+		margin-left: 13vw;
+		margin-right: 13vw;
+		border-radius: 3px;
+		font-size: 1.15rem;
+		top: 5rem;
+	}
 
 	.gallery-container {
 		display: grid;
@@ -244,10 +256,10 @@
     
 
 
-    header, nav, main, footer {
+    /* header, nav, main, footer {
         max-width: 64rem;
         margin:auto;
-    }
+    } */
 
 /*----------- BODY --------------*/
 
@@ -277,13 +289,13 @@ form label.sbs {
     font-size: 1.15rem;
 }
 
-/* .footer2 {
+.footer2 {
     width: 74vw;
     margin-left: 13vw;
     margin-right: 13vw;
     border-radius: 3px;
     font-size: 1.15rem;
     top: 5rem;
-} */
+}
 
 } /* end of media query */
