@@ -32,25 +32,6 @@
 	}
 
 
-	.footer2 {
-		width: 74vw;
-		margin-left: 13vw;
-		margin-right: 13vw;
-		border-radius: 3px;
-		font-size: 1.15rem;
-		top: 5rem;
-	}
-
-
-	.footer-storm {
-		max-width: 74vw;
-		margin-left: 13vw;
-		margin-right: 13vw;
-		border-radius: 3px;
-		font-size: 1.15rem;
-		top: 5rem;
-	}
-
 	.gallery-container {
 		display: grid;
 		grid-template-columns: 1fr 1fr 1fr;
@@ -243,27 +224,28 @@
 		top: 4rem;
 	}
 
-}
-
-/* Xtra Lage Desktop Views ****************************/
-@media only screen and (min-width: 80em) {
-	ul {
-		margin-left: 8rem;
-		margin-right: 8rem;
-	}
 
 
-    
-
-
-    /* header, nav, main, footer {
-        max-width: 64rem;
-        margin:auto;
-    } */
 
 /*----------- BODY --------------*/
 
+/*----------- FORM --------------*/
 
+.weather-container-storm {
+	display: block;
+	position: relative;
+	margin: 0 0 2rem 0;
+	border: none;
+	padding: 1rem;
+	/* width: 80%; */
+	/* margin-left: 20vw; */
+	/* margin-right: 20vw; */
+	/* width: 60vw; */
+	max-width: 74vw;
+	margin-left: 12vw;
+	margin-right: 13vw;
+	top: 1rem;
+}
 
 /*----------- HEADER --------------*/
 
@@ -298,4 +280,29 @@ form label.sbs {
     top: 5rem;
 }
 
+.footer-storm {
+	max-width: 74vw;
+	margin-left: 13vw;
+	margin-right: 13vw;
+	border-radius: 3px;
+	font-size: 1.15rem;
+}
+
 } /* end of media query */
+
+/* Xtra Lage Desktop Views ****************************/
+@media only screen and (min-width: 80em) {
+	ul {
+		margin-left: 8rem;
+		margin-right: 8rem;
+	}
+
+
+    
+
+
+    /* header, nav, main, footer {
+        max-width: 64rem;
+        margin:auto;
+    } */
+}

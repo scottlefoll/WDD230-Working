@@ -64,3 +64,15 @@ if('IntersectionObserver' in window) {
   });
 }
 
+
+// Turn the hamburger menu display on or off in phone view
+
+// function myFunction() {
+//   var x = document.getElementById("myLinks");
+//   if (x.style.display === "block") {
+//     x.style.display = "none";
+//   } else {
+//     x.style.display = "block";
+//   }
+// }
+

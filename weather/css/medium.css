@@ -242,11 +242,6 @@
 	
 
 
-
-
-
-
-
 /*----------- BODY --------------*/
 
 body {
@@ -256,7 +251,20 @@ body {
 
 /*----------- HEADER --------------*/
 
+/*----------- FORRM --------------*/
 
+.weather-container-storm {
+	display: block;
+	position: relative;
+	margin: 0 0 2rem 0;
+	border: none;
+	padding: 1rem;
+	/* width: 80%; */
+	/* margin-left: 20vw; */
+	/* margin-right: 20vw; */
+	/* width: 60vw; */
+	top: 1rem;
+}
 
 /*----------- NAVIGATION --------------*/
     /* nav ul {margin-left: 2%;}
@@ -339,7 +347,13 @@ body {
     margin-top: 1rem;
     }
 
-
+.footer-storm {
+	font-size: .95rem;
+	top: 1rem;
+	margin-top: 2rem;
+	padding-top: 2rem;
+}
+	
 footer p {
     flex-direction: row;
     }
