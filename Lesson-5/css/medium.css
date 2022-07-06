@@ -226,6 +226,17 @@
 	}
 
 
+	.weather-container2 {
+		display: grid;
+		position: relative;
+		margin: 0 0 2rem 0;
+		border: none;
+		padding: 1rem;
+		width: 100%;
+		/* margin-left: 20vw; */
+		/* margin-right: 20vw; */
+		top: -12rem;
+	}
 
 	.weather-container {
 		display: grid;
@@ -233,10 +244,7 @@
 		margin: 0 0 2rem 0;
 		border: none;
 		padding: 1rem;
-		width: 80%;
-		margin-left: 20vw;
-		margin-right: 20vw;
-		width: 60vw;
+		width: 100%;
 		top: -12rem;
 	}
 	
@@ -259,10 +267,6 @@ body {
 	margin: 0 0 2rem 0;
 	border: none;
 	padding: 1rem;
-	/* width: 80%; */
-	/* margin-left: 20vw; */
-	/* margin-right: 20vw; */
-	/* width: 60vw; */
 	top: 1rem;
 }
 
