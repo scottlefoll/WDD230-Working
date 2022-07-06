@@ -487,7 +487,7 @@ ul {
 }
 
 .weather-container2 {
-	display: grid;
+	/* display: grid;
 	position: relative;
 	margin: 0 0 2rem 0;
 	border: none;
@@ -496,10 +496,18 @@ ul {
 	margin-left: 20vw;
 	margin-right: 20vw;
 	width: 60vw;
-	top: 4rem;
+	top: 4rem; */
+
+	display: grid;
+	position: relative;
+	grid-gap: .5rem;
+	grid-template-columns: 1fr;
+	/* background-color: #ACCBE1; */
+	background-color: #2191FB;
+	height: 30vh;
+	margin-top: 2rem;
+	margin-bottom: 2rem;
 }
-
-
 
 .weather-container7 {
 	display: grid;
