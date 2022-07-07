@@ -1121,17 +1121,20 @@ article:nth-child(odd) .data {
 
 
 .home-img {
-	max-width: 450px; 
-	width: 100%;
-	height: auto;
+	width: 50vw;
+	height: 35vh;
+	/* text-align: center; */
+	margin: 0 auto;
+	/* align-items: center; */
+	/* justify-content: center; */
 	padding: 1rem;}
 
 .data {
 	background-color: #ACCBE1;
 	color:blue;
-	padding:.75rem;
+	padding:1rem;
 	vertical-align:middle;
-	font-size:1rem;
+	font-size:.95rem;
 	font-weight:900;
 	border:1px solid #bbb;
 	margin:0 auto;
