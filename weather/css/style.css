@@ -413,7 +413,30 @@ header {
 
 .hero-image {
 	/* background-image: url("../images/scene.jpg");  */
-	background-image: url("../images/franklin400.jpg"); /* The image used */
+	background-image: url("../images/preston8.jpg"); /* The image used */
+	background-color: #cccccc; /* Used if the image is unavailable */
+	height: 200px; /* You must set a specified height */
+	width: 100%;
+	background-position: center; /* Center the image */
+	background-repeat: no-repeat; /* Do not repeat the image */
+	background-size: cover; /* Resize the background image to cover the entire container */
+
+  }
+
+  .hero-soda-image {
+	/* background-image: url("../images/scene.jpg");  */
+	background-image: url("../images/soda8.jpg"); /* The image used */
+	background-color: #cccccc; /* Used if the image is unavailable */
+	height: 200px; /* You must set a specified height */
+	width: 100%;
+	background-position: center; /* Center the image */
+	background-repeat: no-repeat; /* Do not repeat the image */
+	background-size: cover; /* Resize the background image to cover the entire container */
+
+  }
+  .hero-fish-image {
+	/* background-image: url("../images/scene.jpg");  */
+	background-image: url("../images/fish8.jpeg"); /* The image used */
 	background-color: #cccccc; /* Used if the image is unavailable */
 	height: 200px; /* You must set a specified height */
 	width: 100%;
@@ -636,6 +659,17 @@ ul {
 	padding: 0;
 	width: 80%;
 	top: 1rem;
+}
+
+#windChill-stats {
+	position: relative;
+	text-align: left;
+	color: yellow;
+	height: 12.5rem;
+	width: 100%;
+	left: -.15rem;
+	font-weight: 900;
+	font-size: .85rem;
 }
 
 /* ************Flex Grid Alternating for Phone View ******** */
@@ -869,12 +903,20 @@ article {
 	}
 	
 	.hero-image {
-		height: 400px; /* You must set a specified height */
-	  }	
-
-	.hero-image {
 		/* background-image: url("../images/scene.jpg");  */
-		background-image: url("../images/franklin800.jpg"); /* The image used */
+		background-image: url("../images/preston9.jpg"); /* The image used */
+		height: 400px; /* You must set a specified height */
+	}
+
+	.hero-soda-image {
+		/* background-image: url("../images/scene.jpg");  */
+		background-image: url("../images/soda9.jpg"); /* The image used */
+		height: 400px; /* You must set a specified height */
+	}
+
+	.hero-fish-image {
+		/* background-image: url("../images/scene.jpg");  */
+		background-image: url("../images/fish9.jpg"); /* The image used */
 		height: 400px; /* You must set a specified height */
 	}
 
@@ -1180,6 +1222,9 @@ article:nth-child(odd) .data {
 		width: 74vw;
 	}
 
+	#cover {
+		
+	}
 	/* .content-box {
 		font-size: 1.15rem;
 		margin-left: 13vw;
@@ -1293,18 +1338,24 @@ article:nth-child(odd) .data {
 		width: 74vw;
 	}
 
-	
-	.hero-image {
-		background-image: url("../images/scene.jpg"); /* The image used */
-		height: 500px; /* You must set a specified height */
-	  }
 
 	.hero-image {
 		/* background-image: url("../images/scene.jpg");  */
-		background-image: url("../images/franklin1200.jpg"); /* The image used */
+		background-image: url("../images/preston10.jpg"); /* The image used */
 		height: 500px; /* You must set a specified height */
 	}
 
+	.hero-soda-image {
+		/* background-image: url("../images/scene.jpg");  */
+		background-image: url("../images/soda10.jpg"); /* The image used */
+		height: 500px; /* You must set a specified height */
+	}
+
+	.hero-fish-image {
+		/* background-image: url("../images/scene.jpg");  */
+		background-image: url("../images/fish10.jpeg"); /* The image used */
+		height: 500px; /* You must set a specified height */
+	}
 
 	h2 {
 		font-size: 2.25rem;	
@@ -1325,7 +1376,7 @@ article:nth-child(odd) .data {
 	
 	.p-stats {
 		left: .25rem;
-		font-size: 1rem;
+		font-size: .90rem;
 		text-align: left;
 		justify-content: left;
 		position: relative;

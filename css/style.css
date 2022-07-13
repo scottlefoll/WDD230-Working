@@ -529,6 +529,19 @@ h4 {
   top: -4vh;
 }
 
+.home-li-10 {
+  color: black;
+  font-family: "Montserrat", Helvetica, Arial, sans-serif;
+  font-size: 1.75vmin;
+  font-style: normal;
+  font-variant: normal;
+  font-weight: 600;
+  left: 1.5vw;
+  position: relative;
+  text-align: left;
+  top: -3vh;
+}
+
 img {
   max-width: 100%;
 }

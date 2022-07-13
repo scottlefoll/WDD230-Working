@@ -83,11 +83,11 @@
               <section class="stat-summary">
                 <h3 id="h3-stats">Weather Summary</h3>
                 <hr id="hr-stats"/>
-                <p class="p-stats">Currently: <span id="cover">sunny,</span><span id="temp">49</span><span id="temp2">°F</span></p>
-                <p class="p-stats">Wind Chill: <span id="windChill"></span></p>
-                <p class="p-stats">High: <span id="high">55 °F</span></p>
-                <p class="p-stats">Humidity: <span id="humidity">41%</span></p>
-                <p class="p-stats">Wind Speed: <span id="windSpeed">12</span><span>mph</span></p>
+                <p class="p-stats">Currently: <span id="cover"></span><span id="temp"></span></p>
+                <p class="p-stats"><span id="windChill-stats">Wind Chill: </span><span id="windChill"></span></p>
+                <p class="p-stats">High: <span id="high"></span></p>
+                <p class="p-stats">Humidity: <span id="humidity"></span></p>
+                <p class="p-stats">Wind Speed: <span id="windSpeed"></span></p>
               </section>
             </div>
 
@@ -99,29 +99,29 @@
           <h2 class="h3-weather">5 Day Forecast</h2>
           <div class="flex">
             <div class="flex-col">
-              <span class="col-head">Monday</span>
-              <img src="images/sunny9.png" alt="weather!">
-              <span class="data">78 °F</span>
+              <span class="col-head" id="today"></span>
+              <img src="" id="day1_img" alt="weather!">
+              <span class="data" id="day1_high"></span>
             </div>
             <div class="flex-col">
-              <span class="col-head">Tuesday</span>
-              <img src="images/sunny9.png" alt="weather!">
-              <span class="data">80 °F</span>
+              <span class="col-head" id=today1></span>
+              <img src="" id="day2_img" alt="weather!">
+              <span class="data" id="day2_high"></span>
             </div>
             <div class="flex-col">
-              <span class="col-head">Wednesday</span>
-              <img src="images/cloudy9.png" alt="weather!">
-              <span class="data">71 °F</span>
+              <span class="col-head" id=today2></span>
+              <img src="" id="day3_img" alt="weather!">
+              <span class="data" id="day3_high"></span>
             </div>
             <div class="flex-col">
-              <span class="col-head">Thursday</span>
-              <img src="images/rainy9.png" alt="weather!">
-              <span class="data">69 °F</span>
+              <span class="col-head" id=today3></span>
+              <img src="" id="day4_img" alt="weather!">
+              <span class="data" id="day4_high"></span>
             </div>
             <div class="flex-col">
-              <span class="col-head">Friday</span>
-              <img src="images/rainy99.png" alt="weather!">
-              <span class="data">65 °F</span>
+              <span class="col-head" id=today4></span>
+              <img src="" id="day5_img" alt="weather!">
+              <span class="data" id="day5_high"></span>
             </div>
           </div>
         </div>
@@ -192,7 +192,8 @@
             >UpFrontWeather.com</a
           >|</span>
 
-        <span>Attributions | </span>
+        <span>Weather data from: <a href="openweathermap.org"
+          >openweathermap.org</a>| </span>
         <span>Scott R. LeFoll</span>
       </p>
       <p class="p-footer2">
@@ -206,6 +207,17 @@
       const options = { weekday: 'long', day: 'numeric', month: 'short', year: 'numeric'};
       document.getElementById('date-time').innerHTML=currentDate.toLocaleDateString('en-uk', options);
     </script>    
+
+    <script>
+      function myFunction() {
+        var x = document.getElementById("myLinks");
+        if (x.style.display == "block") {
+          x.style.display = "none";
+        } else {
+          x.style.display = "block";
+        }
+      }
+    </script>
 
     <script src="js/script.js"></script>
     <script src="js/windchill.js"></script>

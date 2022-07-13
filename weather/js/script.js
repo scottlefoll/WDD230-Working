@@ -1,4 +1,4 @@
-// This is your site JavaScript code - you can add interactivity and carry out processing
+
 
 // let year_text = new Date().getFullYear();
 // document.getElementById("c_year").innerHTML = year_text;
@@ -65,7 +65,7 @@ if('IntersectionObserver' in window) {
 }
 
 
-// Turn the hamburger menu display on or off in phone view
+// // Turn the hamburger menu display on or off in phone view
 
 // function myFunction() {
 //   var x = document.getElementById("myLinks");
