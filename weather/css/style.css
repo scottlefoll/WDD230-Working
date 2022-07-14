@@ -629,6 +629,10 @@ span {
 	color: white;
   }
 
+#townName {
+	color: black;
+}
+
 ul {
 	margin-left: 0;
 	margin-right: 0;
@@ -1184,6 +1188,67 @@ article:nth-child(odd) .data {
 	width:100%;
 	height:auto;
 }
+
+/* ****** FORECAST ****** */
+.forecast {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+.forecast-flex {
+	display: flex;
+	flex-flow: row wrap;
+	border: 1px solid var(--background-color-1);
+}
+
+.forecast-box {
+	flex: 1 1 auto;
+	border-left: 1px solid var(--background-color-1);
+}
+
+.forecast-box div:nth-child(1) {
+	border-left: none;
+}
+
+.forecast-box p:nth-child(1) {
+	background-color: var(--background-color-2);
+	margin: 0;
+	padding: 1rem;
+	border-bottom: 1px solid;
+}
+
+.forecast-box p:nth-child(3) {
+	padding: 0 1rem;
+}
+
+/* ****** END FORECAST ****** */
+
+/* ****** ARTICLE ****** */
+
+.article {
+	margin-top: 3rem;
+}
+
+.article-content {
+	display: block;
+	/* overflow: hidden; */
+}
+
+.clear-fix::after {
+	display: table;
+	content: "";
+	clear: both;
+}
+
+.article-img {
+	display: block;
+	float: right;
+	width: 400px;
+}
+
+/* ****** END ARTICLE ****** */
+
 
 }
 

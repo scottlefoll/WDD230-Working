@@ -7,23 +7,21 @@ const dt1 = new Date();
 // Get Day of week as int; Friday = 5
 let day1 = dt1.getDay()
 
+const apiURL = "https://api.openweathermap.org/data/2.5/weather?id=5585010&APPID=224ba8d85cc913fa45e35d9a865e6bcb";
 
-    const apiURL = "https://api.openweathermap.org/data/2.5/weather?id=5585010&APPID=224ba8d85cc913fa45e35d9a865e6bcb";
 
+//Get the Summary Weather Status
+fetch(apiURL)
+  .then((response) => response.json())
+  .then((data) => {
+    // console.log(data);
 
-    //Get the Summary Weather Status
-    fetch(apiURL)
-      .then((response) => response.json())
-      .then((data) => {
-        // console.log(data);
-    
-        document.querySelector("#temp").textContent = Math.round(1.8*(data3.main.temp-273) + 32) +"°F";
-        document.querySelector("#cover").textContent = data3.weather[0].main;
-        document.querySelector("#high").textContent = Math.round(1.8*(data3.main.temp_max-273) + 32) +"°F";
-        document.querySelector("#humidity").textContent = data3.main.humidity + "%";
-        document.querySelector("#windSpeed").textContent = Math.round(data3.wind.speed) +" mph";
-    
-      });
+    document.querySelector("#temp").textContent = Math.round(1.8*(data.main.temp-273) + 32) +"°F";
+    document.querySelector("#cover").textContent = data.weather[0].main;
+    document.querySelector("#high").textContent = Math.round(1.8*(data.main.temp_max-273) + 32) +"°F";
+    document.querySelector("#humidity").textContent = data.main.humidity + "%";
+    document.querySelector("#windSpeed").textContent = Math.round(data.wind.speed) +" mph";
+  })
 
 // 5 Day forecast - pick the days of the week based on today's day
 switch (day1) {
@@ -109,44 +107,85 @@ switch (day1) {
 
 // FORECAST API CALL
 
-const forecastURL = "https://api.openweathermap.org/data/2.5/forecast?id=5604473&appid=3bd28921d4e0f537a8315fdda41b8c8d&units=imperial";
+const forecastURL = "https://api.openweathermap.org/data/2.5/forecast?id=5585010&appid=3bd28921d4e0f537a8315fdda41b8c8d&units=imperial";
 
 const getForecast = async () => {
 	const resp = await fetch(forecastURL);
 	data = await resp.json();
-	// console.log(data);
+	console.log(data);
 
-	data.list.filter((value) => {
-		if (value.dt_txt.includes("18:00:00")) {
-			// console.log(value);
 
-			// OBTAINING THE LINK OF ICON
-			const imagesrc = `https://openweathermap.org/img/w/${value.weather[0].icon}.png`;
-
-			const desc = value.weather[0].description;
-			const temp = value.main.temp;
-
-			//GET THE DATE FROM THE API
-			const currentDay = value.dt_txt.slice(0, 10);
-
-			// CONVERTING THE STRING TO DATE OBJECT AND SET UTC TIME
-			const currentDate = new Date(currentDay).toUTCString();
-			// console.log(currentDate);
-			// console.log(currentDay);
-
-			// PASSING THE DATE AND THE TEMPERATURE
-			// document.getElementById("today").textContent = currentDate.slice(0, 3);
+  for (const item in data.list) {
+    if (item.dt_txt.includes("18:00:00")) {
+      // OBTAINING THE LINK OF ICON
+      const imagesrc = `https://openweathermap.org/img/w/${item.weather[0].icon}.png`;
+      const desc = item.weather[0].description;
+      const temp = item.main.temp;
+      const currentDate = new Date(currentDay).toUTCString();
       document.getElementById("day1_high").textContent = `${Math.round(temp)} °F`;
-
-			// SET THE ICON'S ATTRIBUTES
-			document.getElementById("day1_img").setAttribute("alt", desc);
-      document.getElementById("day1_img").setAttribute("src", imagesrc);
-
-		}
-	});
-};
+      document.getElementById("day1_low").textContent = `${Math.round(temp_max)} °F`;
+      document.getElementById("day1_humidity").textContent = `${item.main.humidity} %`;
+      document.getElementById("day1_windSpeed").textContent = `${Math.round(item.wind.speed)} mph`;
+      document.getElementById("day1_cover").textContent = `${item.weather[0].main}`;
+    }
+  }
 
 getForecast();
+
+
+// GET THE INFORMATION FOR	THE 5 DAY FORECAST API CALL
+
+// const forecastURL =	"https://api.openweathermap.org/data/2.5/forecast?id=5604473&appid=3bd28921d4e0f537a8315fdda41b8c8d&units=imperial";
+// const forecastURL = "https://api.openweathermap.org/data/2.5/forecast?id=5585010&appid=3bd28921d4e0f537a8315fdda41b8c8d&units=imperial";
+
+// const getForecast = async () => {
+// 	const resp = await fetch(forecastURL);
+// 	data = await resp.json();
+// 	// console.log(data);
+
+// 	data.list.filter((value) => {
+// 		if (value.dt_txt.includes("18:00:00")) {
+// 			// console.log(value);
+
+// 			const forcastFlex = document.querySelector(".forecast-flex");
+// 			const divForecast = document.createElement("div");
+// 			const pDay = document.createElement("p");
+// 			const pIcon = document.createElement("img");
+// 			const ptemp = document.createElement("p");
+
+// 			// OBTAINING THE LINK OF ICON
+// 			const imagesrc = `https://openweathermap.org/img/w/${value.weather[0].icon}.png`;
+
+// 			const desc = value.weather[0].description;
+// 			const temp = value.main.temp;
+
+// 			//GET THE DATE FROM THE API
+// 			const currentDay = value.dt_txt.slice(0, 10);
+
+// 			// CONVERTING THE STRING TO DATE OBJECT AND SET UTC TIME
+// 			const currentDate = new Date(currentDay).toUTCString();
+// 			// console.log(currentDate);
+// 			// console.log(currentDay);
+
+// 			// PASSING THE DATE AND THE TEMPERATURE
+// 			pDay.textContent = currentDate.slice(0, 3);
+// 			ptemp.textContent = `${temp} °F`;
+
+// 			// SET THE ICON'S ATTRIBUTES
+// 			pIcon.setAttribute("alt", desc);
+// 			pIcon.setAttribute("src", imagesrc);
+
+// 			divForecast.appendChild(pDay);
+// 			divForecast.appendChild(pIcon);
+// 			divForecast.appendChild(ptemp);
+// 			divForecast.classList.add("forecast-box");
+
+// 			forcastFlex.appendChild(divForecast);
+// 		}
+// 	});
+// };
+
+// getForecast();
 
 
 // If the parameters are within the range, calculate the wind chill
@@ -158,8 +197,8 @@ if (ws > 3 && temp < 50) {
   document.getElementById('windChill').textContent="N/A";
 }  
 
-// Instead of 'Wind Chill: N/A' display 'Feels Like: 91°F' 
-if (document.querySelector("#windChill").textContent = "N/A") {
-  document.querySelector("#windChill-stats").textContent = "Feels like: ";
-  document.querySelector("#windChill").textContent = Math.round(1.8*(data.main.feels_like-273) + 32) +"°F";
-}
+// // Instead of 'Wind Chill: N/A' display 'Feels Like: 91°F' 
+// if (document.querySelector("#windChill").textContent = "N/A") {
+//   document.querySelector("#windChill-stats").textContent = "Feels like: ";
+//   document.querySelector("#windChill").textContent = Math.round(1.8*(data.main.feels_like-273) + 32) +"°F";
+// }

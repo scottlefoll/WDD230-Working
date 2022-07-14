@@ -7,24 +7,21 @@ const dt1 = new Date();
 // Get Day of week as int; Friday = 5
 let day1 = dt1.getDay()
 
-
-  
-  const apiURL2 = "https://api.openweathermap.org/data/2.5/weather?id=5585010&APPID=224ba8d85cc913fa45e35d9a865e6bcb";
+const apiURL = "https://api.openweathermap.org/data/2.5/weather?id=5607916&APPID=224ba8d85cc913fa45e35d9a865e6bcb";
 
 
-  //Get the Summary Weather Status
-  fetch(apiURL2)
-    .then((response) => response.json())
-    .then((data2) => {
-      // console.log(data);
-  
-      document.querySelector("#temp-fish").textContent = Math.round(1.8*(data2.main.temp-273) + 32) +"°F";
-      document.querySelector("#cover-fish").textContent = data2.weather[0].main;
-      document.querySelector("#high-fish").textContent = Math.round(1.8*(data2.main.temp_max-273) + 32) +"°F";
-      document.querySelector("#humidity-fish").textContent = data2.main.humidity + "%";
-      document.querySelector("#windSpeed-fish").textContent = Math.round(data2.wind.speed) +" mph";
-  
-    });
+//Get the Summary Weather Status
+fetch(apiURL)
+  .then((response) => response.json())
+  .then((data) => {
+    // console.log(data);
+
+    document.querySelector("#temp").textContent = Math.round(1.8*(data.main.temp-273) + 32) +"°F";
+    document.querySelector("#cover").textContent = data.weather[0].main;
+    document.querySelector("#high").textContent = Math.round(1.8*(data.main.temp_max-273) + 32) +"°F";
+    document.querySelector("#humidity").textContent = data.main.humidity + "%";
+    document.querySelector("#windSpeed").textContent = Math.round(data.wind.speed) +" mph";
+  })
 
 // 5 Day forecast - pick the days of the week based on today's day
 switch (day1) {
@@ -110,7 +107,7 @@ switch (day1) {
 
 // FORECAST API CALL
 
-const forecastURL = "https://api.openweathermap.org/data/2.5/forecast?id=5604473&appid=3bd28921d4e0f537a8315fdda41b8c8d&units=imperial";
+const forecastURL = "https://api.openweathermap.org/data/2.5/forecast?id=5607916&appid=3bd28921d4e0f537a8315fdda41b8c8d&units=imperial";
 
 const getForecast = async () => {
 	const resp = await fetch(forecastURL);
@@ -159,8 +156,8 @@ if (ws > 3 && temp < 50) {
   document.getElementById('windChill').textContent="N/A";
 }  
 
-// Instead of 'Wind Chill: N/A' display 'Feels Like: 91°F' 
-if (document.querySelector("#windChill").textContent = "N/A") {
-  document.querySelector("#windChill-stats").textContent = "Feels like: ";
-  document.querySelector("#windChill").textContent = Math.round(1.8*(data.main.feels_like-273) + 32) +"°F";
-}
+// // Instead of 'Wind Chill: N/A' display 'Feels Like: 91°F' 
+// if (document.querySelector("#windChill").textContent = "N/A") {
+//   document.querySelector("#windChill-stats").textContent = "Feels like: ";
+//   document.querySelector("#windChill").textContent = Math.round(1.8*(data.main.feels_like-273) + 32) +"°F";
+// }

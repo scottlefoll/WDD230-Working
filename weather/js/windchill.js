@@ -9,6 +9,21 @@ let day1 = dt1.getDay()
 
 const apiURL = "https://api.openweathermap.org/data/2.5/weather?id=5604473&APPID=224ba8d85cc913fa45e35d9a865e6bcb";
 
+// const townName = document.getElementById("townName").innerHTML;
+// if (townName === "Preston") {
+//   const apiURL = "https://api.openweathermap.org/data/2.5/weather?id=5604473&APPID=224ba8d85cc913fa45e35d9a865e6bcb";
+// }
+
+// const townName = document.getElementById("townName").innerHTML;
+// //set the correct URL for the town.
+// if (townName === "Preston") {
+//   const apiURL = "https://api.openweathermap.org/data/2.5/weather?id=5604473&APPID=224ba8d85cc913fa45e35d9a865e6bcb";
+// } else if (townName === "Soda Springs") {
+//   const apiURL = "https://api.openweathermap.org/data/2.5/weather?id=5607916&APPID=224ba8d85cc913fa45e35d9a865e6bcb";
+// } else if (townName === "Fish Haven") {
+//   const apiURL = "https://api.openweathermap.org/data/2.5/weather?id=5585010&APPID=224ba8d85cc913fa45e35d9a865e6bcb";
+// }
+
 
 //Get the Summary Weather Status
 fetch(apiURL)
@@ -21,7 +36,7 @@ fetch(apiURL)
     document.querySelector("#high").textContent = Math.round(1.8*(data.main.temp_max-273) + 32) +"°F";
     document.querySelector("#humidity").textContent = data.main.humidity + "%";
     document.querySelector("#windSpeed").textContent = Math.round(data.wind.speed) +" mph";
-
+  })
 
 // 5 Day forecast - pick the days of the week based on today's day
 switch (day1) {
@@ -156,8 +171,8 @@ if (ws > 3 && temp < 50) {
   document.getElementById('windChill').textContent="N/A";
 }  
 
-// Instead of 'Wind Chill: N/A' display 'Feels Like: 91°F' 
-if (document.querySelector("#windChill").textContent = "N/A") {
-  document.querySelector("#windChill-stats").textContent = "Feels like: ";
-  document.querySelector("#windChill").textContent = Math.round(1.8*(data.main.feels_like-273) + 32) +"°F";
-}
+// // Instead of 'Wind Chill: N/A' display 'Feels Like: 91°F' 
+// if (document.querySelector("#windChill").textContent = "N/A") {
+//   document.querySelector("#windChill-stats").textContent = "Feels like: ";
+//   document.querySelector("#windChill").textContent = Math.round(1.8*(data.main.feels_like-273) + 32) +"°F";
+// }
