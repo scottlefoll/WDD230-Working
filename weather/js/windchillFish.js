@@ -106,37 +106,103 @@ switch (day1) {
 
 
 // FORECAST API CALL
-
-const forecastURL = "https://api.openweathermap.org/data/2.5/forecast?id=5585010&appid=3bd28921d4e0f537a8315fdda41b8c8d&units=imperial";
+// WORKING VERSION !!!
+const forecastURL = "https://api.openweathermap.org/data/2.5/forecast?id=5604473&appid=3bd28921d4e0f537a8315fdda41b8c8d&units=imperial";
 
 const getForecast = async () => {
 	const resp = await fetch(forecastURL);
 	data = await resp.json();
-	console.log(data);
+	// console.log(data);
 
+  data.list.filter((value) => {
+		if (value.dt_txt.includes("18:00:00")) {
+			// console.log(value);
 
-  for (const item in data.list) {
-    if (item.dt_txt.includes("18:00:00")) {
-      // OBTAINING THE LINK OF ICON
-      const imagesrc = `https://openweathermap.org/img/w/${item.weather[0].icon}.png`;
-      const desc = item.weather[0].description;
-      const temp = item.main.temp;
-      const currentDate = new Date(currentDay).toUTCString();
+			// OBTAINING THE LINK OF ICON
+			const imagesrc = `https://openweathermap.org/img/w/${value.weather[0].icon}.png`;
+
+			const desc = value.weather[0].description;
+			const temp = value.main.temp;
+
+			//GET THE DATE FROM THE API
+			const currentDay = value.dt_txt.slice(0, 10);
+
+			// CONVERTING THE STRING TO DATE OBJECT AND SET UTC TIME
+			const currentDate = new Date(currentDay).toUTCString();
+			// console.log(currentDate);
+			// console.log(currentDay);
+
+			// PASSING THE DATE AND THE TEMPERATURE
+			// document.getElementById("today").textContent = currentDate.slice(0, 3);
       document.getElementById("day1_high").textContent = `${Math.round(temp)} °F`;
-      document.getElementById("day1_low").textContent = `${Math.round(temp_max)} °F`;
-      document.getElementById("day1_humidity").textContent = `${item.main.humidity} %`;
-      document.getElementById("day1_windSpeed").textContent = `${Math.round(item.wind.speed)} mph`;
-      document.getElementById("day1_cover").textContent = `${item.weather[0].main}`;
-    }
-  }
+
+			// SET THE ICON'S ATTRIBUTES
+			document.getElementById("day1_img").setAttribute("alt", desc);
+      document.getElementById("day1_img").setAttribute("src", imagesrc);
+
+		}
+	});
+};
 
 getForecast();
+
+
+
+
+// const forecastURL = "https://api.openweathermap.org/data/2.5/forecast?id=5604473&appid=3bd28921d4e0f537a8315fdda41b8c8d&units=imperial";
+
+// const getForecast = async () => {
+// 	const resp = await fetch(forecastURL);
+// 	data = await resp.json();
+// 	// console.log(data);
+
+//   const forecast_data = data.list.filter((value) => {
+//     if (value.dt_txt.includes("18:00:00"))
+//   } 
+    
+//   const result = ages.filter(checkAdult);
+
+//   function checkAdult(age) {
+//     return age >= 18;
+//   }
+  
+    
+//     {
+// 			// console.log(value);
+
+// 			// OBTAINING THE LINK OF ICON
+// 			const imagesrc = `https://openweathermap.org/img/w/${value.weather[0].icon}.png`;
+
+// 			const desc = value.weather[0].description;
+// 			const temp = value.main.temp;
+
+// 			//GET THE DATE FROM THE API
+// 			const currentDay = value.dt_txt.slice(0, 10);
+
+// 			// CONVERTING THE STRING TO DATE OBJECT AND SET UTC TIME
+// 			const currentDate = new Date(currentDay).toUTCString();
+// 			// console.log(currentDate);
+// 			// console.log(currentDay);
+
+// 			// PASSING THE DATE AND THE TEMPERATURE
+// 			// document.getElementById("today").textContent = currentDate.slice(0, 3);
+//       document.getElementById("day1_high").textContent = `${Math.round(temp)} °F`;
+
+// 			// SET THE ICON'S ATTRIBUTES
+// 			document.getElementById("day1_img").setAttribute("alt", desc);
+//       document.getElementById("day1_img").setAttribute("src", imagesrc);
+
+// 		}
+// 	});
+// };
+
+// getForecast();
 
 
 // GET THE INFORMATION FOR	THE 5 DAY FORECAST API CALL
 
 // const forecastURL =	"https://api.openweathermap.org/data/2.5/forecast?id=5604473&appid=3bd28921d4e0f537a8315fdda41b8c8d&units=imperial";
-// const forecastURL = "https://api.openweathermap.org/data/2.5/forecast?id=5585010&appid=3bd28921d4e0f537a8315fdda41b8c8d&units=imperial";
+// // const forecastURL = "https://api.openweathermap.org/data/2.5/forecast?id=5585010&appid=3bd28921d4e0f537a8315fdda41b8c8d&units=imperial";
 
 // const getForecast = async () => {
 // 	const resp = await fetch(forecastURL);

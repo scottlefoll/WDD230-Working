@@ -15,11 +15,6 @@
 
 
 
-
-
-
-
-
 // Get Date
 const d = new Date();
 // Get Day of week as int; Friday = 5
