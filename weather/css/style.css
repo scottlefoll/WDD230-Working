@@ -1523,12 +1523,13 @@ article:nth-child(odd) .data {
 		display: inline-block;
 		position: relative;
 		text-align: center;
-		font-size: 1.5rem;
+		align-items: center;
+		font-size: 2rem;
 		font-weight: 900;
 		color: black;
 		padding: 2rem;
 		margin: 0 auto;
-		top: -5rem;
+		top: 0;
 	}
 	
 	.home-h3{
@@ -1585,12 +1586,15 @@ article:nth-child(odd) .data {
 	}
 	
 	.home-container {
-		padding: 1rem;
+		display: grid;
+		position: relative;
+		padding: 2rem;
 		background-color: white;
 		width: 74vw;
 		margin-left: 13vw;
 		margin-right: 13vw;
 		margin: 0 auto;
+		top: 2rem;
 	}
 
 	.home-section {
