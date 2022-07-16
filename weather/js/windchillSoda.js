@@ -78,36 +78,50 @@ switch (day1) {
 
 
 
-// Get the 5 Day Forecast
-    
-// const forecastURL = "https://api.openweathermap.org/data/2.5/forecast?id=5604473&appid=224ba8d85cc913fa45e35d9a865e6bcb&units=imperial";
+// FORECAST API CALL
+
+// const forecastURL = "https://api.openweathermap.org/data/2.5/forecast?id=5607916&appid=224ba8d85cc913fa45e35d9a865e6bcb&units=imperial";
 
 // const getForecast = async () => {
 // 	const resp = await fetch(forecastURL);
 // 	data = await resp.json();
+// 	// console.log(data);
 
 // 	data.list.filter((value) => {
 // 		if (value.dt_txt.includes("18:00:00")) {
-//     	// OBTAINING THE LINK OF ICON
+// 			// console.log(value);
+
+// 			// OBTAINING THE LINK OF ICON
 // 			const imagesrc = `https://openweathermap.org/img/w/${value.weather[0].icon}.png`;
+
 // 			const desc = value.weather[0].description;
 // 			const temp = value.main.temp;
+
+// 			//GET THE DATE FROM THE API
+// 			const currentDay = value.dt_txt.slice(0, 10);
+
+// 			// CONVERTING THE STRING TO DATE OBJECT AND SET UTC TIME
 // 			const currentDate = new Date(currentDay).toUTCString();
+// 			// console.log(currentDate);
+// 			// console.log(currentDay);
+
+// 			// PASSING THE DATE AND THE TEMPERATURE
+// 			// document.getElementById("today").textContent = currentDate.slice(0, 3);
 //       document.getElementById("day1_high").textContent = `${Math.round(temp)} °F`;
 
 // 			// SET THE ICON'S ATTRIBUTES
 // 			document.getElementById("day1_img").setAttribute("alt", desc);
-// 			document.getElementById("day1_img").setAttribute("src", imagesrc);
+//       document.getElementById("day1_img").setAttribute("src", imagesrc);
+
 // 		}
 // 	});
 // };
 
 // getForecast();
 
-
 // FORECAST API CALL
-
-const forecastURL = "https://api.openweathermap.org/data/2.5/forecast?id=5607916&appid=3bd28921d4e0f537a8315fdda41b8c8d&units=imperial";
+// WORKING COPY 2!!!!!
+const forecastURL = "https://api.openweathermap.org/data/2.5/forecast?id=5607916&appid=224ba8d85cc913fa45e35d9a865e6bcb&units=imperial";
 
 const getForecast = async () => {
 	const resp = await fetch(forecastURL);
@@ -116,36 +130,56 @@ const getForecast = async () => {
 
 	data.list.filter((value) => {
 		if (value.dt_txt.includes("18:00:00")) {
-			// console.log(value);
+			console.log(value);
 
 			// OBTAINING THE LINK OF ICON
 			const imagesrc = `https://openweathermap.org/img/w/${value.weather[0].icon}.png`;
 
 			const desc = value.weather[0].description;
 			const temp = value.main.temp;
+      let i = 1;
 
-			//GET THE DATE FROM THE API
-			const currentDay = value.dt_txt.slice(0, 10);
+      if (i = 1){
+        document.getElementById("day1_high").textContent = `${Math.round(temp)} °F`;
 
-			// CONVERTING THE STRING TO DATE OBJECT AND SET UTC TIME
-			const currentDate = new Date(currentDay).toUTCString();
-			// console.log(currentDate);
-			// console.log(currentDay);
+			  // SET THE ICON'S ATTRIBUTES
+			  document.getElementById("day1_img").setAttribute("alt", desc);
+        document.getElementById("day1_img").setAttribute("src", imagesrc);
+      }
+      if (i = 2){
+        document.getElementById("day2_high").textContent = `${Math.round(temp)} °F`;
 
-			// PASSING THE DATE AND THE TEMPERATURE
-			// document.getElementById("today").textContent = currentDate.slice(0, 3);
-      document.getElementById("day1_high").textContent = `${Math.round(temp)} °F`;
+			  // SET THE ICON'S ATTRIBUTES
+			  document.getElementById("day2_img").setAttribute("alt", desc);
+        document.getElementById("day2_img").setAttribute("src", imagesrc);
+      }
+      if (i = 3){
+        document.getElementById("day3_high").textContent = `${Math.round(temp)} °F`;
 
-			// SET THE ICON'S ATTRIBUTES
-			document.getElementById("day1_img").setAttribute("alt", desc);
-      document.getElementById("day1_img").setAttribute("src", imagesrc);
+			  // SET THE ICON'S ATTRIBUTES
+			  document.getElementById("day3_img").setAttribute("alt", desc);
+        document.getElementById("day3_img").setAttribute("src", imagesrc);
+      }
+      if (i = 4){
+        document.getElementById("day4_high").textContent = `${Math.round(temp)} °F`;
 
+			  // SET THE ICON'S ATTRIBUTES
+			  document.getElementById("day4_img").setAttribute("alt", desc);
+        document.getElementById("day4_img").setAttribute("src", imagesrc);
+      }
+      if (i = 5){
+        document.getElementById("day5_high").textContent = `${Math.round(temp)} °F`;
+
+			  // SET THE ICON'S ATTRIBUTES
+			  document.getElementById("day5_img").setAttribute("alt", desc);
+        document.getElementById("day5_img").setAttribute("src", imagesrc);
+      }
+      i = i + 1;
 		}
 	});
 };
 
 getForecast();
-
 
 // If the parameters are within the range, calculate the wind chill
 // Else display N/A
