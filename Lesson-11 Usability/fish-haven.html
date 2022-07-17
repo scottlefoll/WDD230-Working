@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="description"
+      content="Fish Haven"
+    />
+    <meta name="keywords" content="HTML, CSS, JavaScript" />
+    <meta name="author" content="Scott LeFoll" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="stylesheet" href="css/normalize.css" />
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="//fonts.googleapis.com/css?family=Montserrat"
+    />
+    <title>UpFrontWeather.com Fish Haven page</title>
+  </head>
+
+  <body class="weather-content">
+   
+    <div id="topDIV" style="padding:16px;background-color:lightgray"></div>
+
+    <header>
+      <div class="logo">
+          <picture>
+            <img 
+              src="images/weather.png"
+              alt="upfrontweather.com image"
+            />
+          </picture>
+          <section class="headings">
+            <h1>Up Front Weather </h1>
+            <q class="m">Accurate weather, when you need it.</q>
+          </section>    
+      </div>
+    </header>
+
+
+    <nav class="mobile-container">
+
+      <!-- ****************************** Hamburger menu html-->
+
+      <!-- Top Navigation Menu -->
+      <div class="topnav">
+        <a href="#home" >Menu</a>
+        <div id="myLinks">
+          <a href="index.html" id="topnav-home" class="active">🏡Home</a>
+          <a href="preston.html" id="topnav-preston">🚜Preston</a>
+          <a href="soda-springs.html" id="topnav-soda">🌄Soda Springs</a>
+          <a href="fish-haven.html" id="topnav-fish">🏞️Fish Haven</a>
+          <a href="storm-center.html" id="topnav-storm">⛈️Storm Center</a>
+          <a href="gallery.html" id="topnav-gallery">🖼️Gallery</a>
+        </div>
+        <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+          <i class="fa fa-bars"></i>
+        </a>
+      </div>
+      <!-- ****************************** Hamburger menu html-->
+        <ul class="big-menu">
+          <li><a href="index.html" id="home" class="active">🏡Home</a></li>
+          <li><a href="preston.html" id="preston">🚜Preston</a></li>
+          <li><a href="soda-springs.html" id="soda">🌄Soda Springs</a></li>
+          <li><a href="fish-haven.html" id="fish">🏞️Fish Haven</a></li>
+          <li><a href="storm-center.html" id="storm">⛈️Storm Center</a></li>
+          <li><a href="gallery.html" id="gallery">🖼️Gallery</a></li>
+        </ul>
+    </nav>
+
+    <main>
+      <h2 id="townName">Fish Haven</h2>
+
+      <div class="hero-container">
+        <div class="hero-div">
+          <div class="hero-fish-image"></div>
+
+            <div class="stat-summary-container">
+              <section class="stat-summary">
+                <h3 id="h3-stats">Weather Summary</h3>
+                <hr id="hr-stats"/>
+                <p class="p-stats">Currently: <span id="cover"></span><span id="temp"></span></p>
+                <p class="p-stats"><span id="windChill-stats">Wind Chill: </span><span id="windChill"></span></p>
+                <p class="p-stats">High: <span id="high"></span></p>
+                <p class="p-stats">Humidity: <span id="humidity"></span></p>
+                <p class="p-stats">Wind Speed: <span id="windSpeed"></span></p>
+              </section>
+            </div>
+
+        </div>
+      </div>
+      
+
+        <div class="weather-container">
+          <h2 class="h3-weather">5 Day Forecast</h2>
+          <div class="flex">
+            <div class="flex-col">
+              <span class="col-head" id="today"></span>
+              <img src="" id="day1_img" alt="weather!">
+              <span class="data" id="day1_high"></span>
+            </div>
+            <div class="flex-col">
+              <span class="col-head" id=today1></span>
+              <img src="" id="day2_img" alt="weather!">
+              <span class="data" id="day2_high"></span>
+            </div>
+            <div class="flex-col">
+              <span class="col-head" id=today2></span>
+              <img src="" id="day3_img" alt="weather!">
+              <span class="data" id="day3_high"></span>
+            </div>
+            <div class="flex-col">
+              <span class="col-head" id=today3></span>
+              <img src="" id="day4_img" alt="weather!">
+              <span class="data" id="day4_high"></span>
+            </div>
+            <div class="flex-col">
+              <span class="col-head" id=today4></span>
+              <img src="" id="day5_img" alt="weather!">
+              <span class="data" id="day5_high"></span>
+            </div>
+          </div>
+        </div>
+
+        <!-- <article class="forecast">
+          <h2 class="h3-weather">5 Day Forecast</h2>
+          <div class="forecast-flex">
+          </div>
+        </article> -->
+
+
+      <div class="content-box" id="rodeo-box"><h2 class="h2-rodeo">Fish Haven on Bear Lake</h2>
+        <img class="rodeo-pic" src="images/bearLake.jpg" alt="rodeo">
+        <p class="p-rodeo">In southeastern Idaho a tiny town perches on the banks of beautiful
+        Bear Lake. The lakes lovely shores have been a place of respite and sustenance for 
+        generations, and today the lake and the town draw visitors from around the area and 
+        around the world. The town is certainly small - it has only a couple of hundred full-time 
+        residents.<br><br>
+      
+        The town is a small, but lively, community. It is a place where people can come to relax, 
+        make friends and enjoy the outdoors. And, of course, fish. As in "Fish Haven."<br><br>
+
+        There are records of early fishing in the lake going back to pioneer days and even back among 
+        the native americans. The lake is a popular destination for fishing and boating, and the town draws
+        a large crows each year for the annual fishing festival. But if you want to come, make sure you 
+        have a permit, and an electric motor on your boat, and you'll be sure to enjoy the fishing. The 
+        rangers are strict about the rules, but they are generous with the permits. You can get a permit at 
+        Mel's Outdoor Sports on Barnes Road.<br><br>
+        
+
+        If you'd like more information go to: <a href="https://bearlake.org/" target="_blank">
+          BearLake.org</a></p>
+         
+      </div>
+
+      <div class="contact-container">
+        <div class="map-box">
+          <a href="https://www.google.com/maps/@42.0965697,-111.8727673,16.25z" target="_blank">
+          <img class="map" src="images/map.png" alt="map">
+          </a> 
+        </div>
+
+        <div class="address-box">   
+            <p><b>Up Front Weather Contacts</b> <br><br> Mailing address: 📌<br><br>
+            271 West Main Street<br>
+            Preston, Idaho 87301<br><br>
+            phone: ☎️ 208-555-1212  <br>
+            email: 📧 <a href="mailto:scottlefoll@gmail.com">
+                          Up Front Weather</a>.<br><br>
+
+                          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                          <a href="#" class="fa fa-facebook"></a>&nbsp;&nbsp;
+                          <a href="#" class="fa fa-pinterest"></a>&nbsp;&nbsp;
+                          <a href="#" class="fa fa-twitter"></a>&nbsp;&nbsp;
+                          <a href="#" class="fa fa-youtube"></a>
+
+            </p>
+        </div>
+        
+      </div>
+
+    </main>
+
+    <footer class="footer3">
+      <p class="p-footer">
+        <span          >Ⓒ<a href="index.html"
+            >UpFrontWeather.com</a
+          >|</span>
+
+        <span>Weather data from: <a href="openweathermap.org"
+          >openweathermap.org</a>| </span>
+        <span>Scott R. LeFoll</span>
+      </p>
+      <p class="p-footer2">
+        <span id="date-time"></span>
+      </p>
+    </footer>
+
+    <script>
+      let dt = new Date();
+      const currentDate = new Date();
+      const options = { weekday: 'long', day: 'numeric', month: 'short', year: 'numeric'};
+      document.getElementById('date-time').innerHTML=currentDate.toLocaleDateString('en-uk', options);
+    </script>    
+
+    <script>
+      function myFunction() {
+        var x = document.getElementById("myLinks");
+        if (x.style.display == "block") {
+          x.style.display = "none";
+        } else {
+          x.style.display = "block";
+        }
+      }
+    </script>
+
+    <script src="js/script.js"></script>
+    <script src="js/windchillFish.js"></script>
+  </body>
+</html>
+
+<!-- ***************************************************** -->
