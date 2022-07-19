@@ -40,7 +40,7 @@ a:nth-child(1) {
 }
 a:nth-child(1) div {
   /* HTML - CSS */
-  background-image: url("../assets/tour1z.jpg");
+  background-image: url("tour1.jpg");
   background-position: center;
   left: 250px;
   background-size: 500px;
@@ -54,7 +54,7 @@ a:nth-child(2) {
 }
 a:nth-child(2) div {
   /* Python ok */
-  background-image: url("../assets/tour2.jpg");
+  background-image: url("tour2.jpg");
   background-position: center;
   background-size: 500px;
   background-repeat: no-repeat;
@@ -68,7 +68,7 @@ a:nth-child(3) {
 }
 a:nth-child(3) div {
   /* JavaScript ok */
-  background-image: url("../assets/tour3.jpg");
+  background-image: url("tour3.jpg");
   background-position: center;
   background-size: 600px;
   background-repeat: no-repeat;
@@ -82,7 +82,7 @@ a:nth-child(4) {
 }
 a:nth-child(4) div {
   /* Deep Learning X */
-  background-image: url("../assets/tour4.jpg");
+  background-image: url("tour4.jpg");
   background-position: center;
   background-size: 500px;
   background-repeat: no-repeat;
@@ -98,7 +98,7 @@ a:nth-child(5) {
 }
 a:nth-child(5) div {
   /* Tips */
-  background-image: url("../assets/cozumel2.png");
+  background-image: url("cozumel2.png");
   background-position: center;
   background-repeat: no-repeat;
   background-size: 400px;

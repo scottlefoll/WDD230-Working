@@ -430,10 +430,10 @@ p {
 
 .circle_menu_widget {
   position: fixed;
-  right: calc(50% - 750px);
-  top: 50vh;
-  width: 400px;
-  height: 400px;
+  right: calc(50% - 800px);
+  top: 40vh;
+  width: 600px;
+  height: 600px;
   z-index: 100;
 }
 
