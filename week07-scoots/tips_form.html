@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8" />
+    <title>Javascript Cheatsheet</title>
+    <style>
+      form {
+        /* Center the form on the page */
+        margin: 0 auto;
+        width: 400px;
+        /* Form outline */
+        padding: 1em;
+        border: 1px solid #ccc;
+        border-radius: 1em;
+        background-color: black;
+        color: white;
+      }
+
+      ul {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+      }
+
+      form li + li {
+        margin-top: 1em;
+      }
+
+      label {
+        /* Uniform size & alignment */
+        display: inline-block;
+        width: 90px;
+        text-align: right;
+        font-family: "Proxima Nova", Helvetica, Arial, sans-serif;
+        font-weight: 500;
+      }
+
+      input,
+      textarea {
+        /* To make sure that all text fields have the same font settings
+         By default, textareas have a monospace font */
+        font: 1em sans-serif;
+
+        /* Uniform text field size */
+        width: 300px;
+        box-sizing: border-box;
+
+        /* Match form field borders */
+        border: 1px solid #999;
+      }
+
+      input:focus,
+      textarea:focus {
+        /* Additional highlight for focused elements */
+        border-color: #000;
+      }
+
+      textarea {
+        /* Align multiline text fields with their labels */
+        vertical-align: top;
+
+        /* Provide space to type some text */
+        height: 5em;
+      }
+
+      .button {
+        /* Align buttons with the text fields */
+        padding-left: 90px; /* same size as the label elements */
+      }
+
+      button {
+        /* This extra margin represent roughly the same space as the space
+         between the labels and their text fields */
+        margin-left: 0.5em;
+        text-align: center;
+        font-family: "Proxima Nova", Helvetica, Arial, sans-serif;
+        font-weight: 500;
+      }
+      #feedback {
+        background-color: antiquewhite;
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        padding: 0.5em;
+        /* make this element invisible until we are ready for it */
+        display: none;
+      }
+
+      #msg {
+        text-align: left;
+        font-family: "Proxima Nova", Helvetica, Arial, sans-serif;
+        font-style: italic;
+        font-weight: 800;
+        color: black;
+      }
+
+      .moveDown {
+        margin-top: 3em;
+      }
+      .title {
+        text-align: center;
+        font-size: 20px;
+        font-family: "Proxima Nova", Helvetica, Arial, sans-serif;
+        font-weight: 800;
+      }
+    </style>
+  </head>
+
+  <div id="feedback"></div>
+
+  <form action="/my-handling-form-page" method="post">
+    <div class="title">Get a free Javascript cheatsheet!</div>
+    <br />
+    <ul>
+      <li>
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="user_name" />
+      </li>
+      <li>
+        <label for="mail">E-mail:</label>
+        <input
+          type="email"
+          id="mail"
+          name="user_email"
+          onchange="enableSubmit()"
+        />
+      </li>
+      <li>
+        <label for="msg">Your javascript tip:</label>
+        <textarea id="msg" name="user_message">
+[If you have a Javascript tip you'd like to send us, you may enter it here.]</textarea
+        >
+      </li>
+      <li class="button">
+        <button class="button_state" type="submit" enabled>
+          Take me to the cheatsheet link.
+        </button>
+      </li>
+    </ul>
+
+    <script>
+      // get the feedback div element so we can do something with it.
+      const feedbackElement = document.getElementById("feedback");
+      // get the form so we can read what was entered in it.
+      const formElement = document.forms[0];
+
+      // add a 'listener' to wait for a submission of our form. When that happens run the code below.
+
+      formElement.addEventListener("submit", function (e) {
+        // stop the form from doing the default action
+        e.preventDefault();
+        window.open(
+          "https://cdn.glitch.global/f9c60c17-585c-403a-a4d5-7e9684471694/cheatography_davechild_javascript.pdf?v=1654097582927",
+          "_blank"
+        // closeForm()
+        );
+      });
+
+      let input = document.querySelector(".input");
+      let button = document.querySelector(".button_state");
+
+      button_state.disabled = true; //setting button state to disabled
+
+      input.addEventListener("change", stateHandle);
+
+      function stateHandle() {
+        if (document.querySelector(".input").value === "") {
+          button_state.disabled = true; //button remains disabled
+        } else {
+          button_state.disabled = false; //button is enabled
+        }
+      }
+
+      function closeForm() {
+        document.getElementById("myForm").style.display = "none";
+      }
+
+      function enableSubmit(val) {
+        // button.enabled = true;
+        alert("Thank you. You will now be taken to the download link.");
+        window.open(
+          "https://cdn.glitch.global/f9c60c17-585c-403a-a4d5-7e9684471694/cheatography_davechild_javascript.pdf?v=1654097582927",
+          "_blank"
+        );
+      }
+    </script>
+  </form>
+</html>

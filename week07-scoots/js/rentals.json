@@ -1,0 +1,61 @@
+
+{
+    "rentals" : [
+        {
+            "type":"Honda Metro Scooter", 
+            "max": 1, 
+            "Rhalf":20, 
+            "Rfull":30, 
+            "Whalf":25, 
+            "Wfull":35,
+        },
+
+        {
+            "type":"Honda Dio Scooter", 
+            "max": 2, 
+            "Rhalf":30, 
+            "Rfull":40, 
+            "Whalf":35, 
+            "Wfull":45
+        },
+
+        {
+            "type":"Honda PCX150 Scooter", 
+            "max": 2, 
+            "Rhalf":40, 
+            "Rfull":50, 
+            "Whalf":45, 
+            "Wfull":55
+        },
+
+        {
+            "type":"Honda Pioneer ATV", 
+            "max": 4, 
+            "Rhalf":50, 
+            "Rfull":70, 
+            "Whalf":60, 
+            "Wfull":80
+        },
+
+        {
+            "type":"Jeep Wrangler Wrangler 4 door", 
+            "max": 5, 
+            "Rhalf":70, 
+            "Rfull":100, 
+            "Whalf":85, 
+            "Wfull":125
+        },
+
+        {
+            "type":"Jeep Wrangler Wrangler 2 door", 
+            "max": 4, 
+            "Rhalf":60, 
+            "Rfull":85, 
+            "Whalf":70, 
+            "Wfull":90
+        }
+
+
+    ]
+}
+data = '[{"name" : "Ashwin", "age" : "20"},{"name" : "Abhinandan", "age" : "20"}]';

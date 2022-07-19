@@ -1,0 +1,283 @@
+
+@import url(https://db.onlinewebfonts.com/c/c65d68f19b0eb716aa21e71e43f4af8a?family=Swistblnk+Monthoers);
+@import url(https://db.onlinewebfonts.com/c/1627b9e37ec7087e1de5561238a04816?family=Copperplate);
+/* @import url(https://cdn.glitch.global/06316b36-b464-4645-b223-ff51dc66e8d2/TheGreatOutdoors-Rough-Regular.otf?v=1652404531152); */
+
+body {
+  background-color: #c39fb0;
+  margin: 0;
+  padding: 0;
+}
+
+main {
+  background-color: white;
+}
+
+nav {
+  font-family: Calibri, "Trade Gothic LT", Trebuchet, sans-serif;
+  /*   display: inline-block; */
+  background-color: #a690a4;
+  color: #83110b;
+  font-weight: 900;
+  font-size: 20px;
+  margin: 0;
+  overflow: hidden;
+}
+
+nav ul {
+  margin: 0;
+  padding: 0;
+  display: flex;
+}
+
+nav ul li {
+  /*   display: inline-block; */
+  list-style-type: none;
+}
+
+nav ul li a {
+  background-color: #a690a4;
+  color: #83110b;
+  line-height: 3em;
+  padding: 1em 3em;
+  text-decoration: none;
+}
+
+nav ul li:first-child {
+  margin-right: 0;
+}
+
+nav ul li a.logo {
+  background-color: #a690a4;
+  color: #83110b;
+}
+
+nav ul li a:hover {
+  background-color: #665264;
+  text-decoration: underline;
+}
+
+h1 {
+  font-family: Calibri, "Trade Gothic LT", Trebuchet, sans-serif;
+  color: #83110b;
+  font-size: 40px;
+  font-weight: 500;
+  line-height: 150%;
+  text-align: left;
+}
+
+h2 {
+  font-family: Calibri, "Trade Gothic LT", Trebuchet, sans-serif;
+  color: #83110b;
+  font-size: 30px;
+  font-weight: 500;
+  line-height: 150%;
+  text-align: left;
+}
+
+p {
+  font-family: Calibri, "Trade Gothic LT", Trebuchet, sans-serif;
+  color: brown;
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 150%;
+  text-align: left;
+}
+
+@font-face {
+  font-family: "Swistblnk Monthoers";
+  src: url("//db.onlinewebfonts.com/t/c65d68f19b0eb716aa21e71e43f4af8a.eot");
+  src: url("//db.onlinewebfonts.com/t/c65d68f19b0eb716aa21e71e43f4af8a.eot?#iefix")
+      format("embedded-opentype"),
+    url("//db.onlinewebfonts.com/t/c65d68f19b0eb716aa21e71e43f4af8a.woff2")
+      format("woff2"),
+    url("//db.onlinewebfonts.com/t/c65d68f19b0eb716aa21e71e43f4af8a.woff")
+      format("woff"),
+    url("//db.onlinewebfonts.com/t/c65d68f19b0eb716aa21e71e43f4af8a.ttf")
+      format("truetype"),
+    url("//db.onlinewebfonts.com/t/c65d68f19b0eb716aa21e71e43f4af8a.svg#Swistblnk Monthoers")
+      format("svg");
+}
+
+@font-face {
+  font-family: "Copperplate";
+  src: url("//db.onlinewebfonts.com/t/1627b9e37ec7087e1de5561238a04816.eot");
+  src: url("//db.onlinewebfonts.com/t/1627b9e37ec7087e1de5561238a04816.eot?#iefix")
+      format("embedded-opentype"),
+    url("//db.onlinewebfonts.com/t/1627b9e37ec7087e1de5561238a04816.woff2")
+      format("woff2"),
+    url("//db.onlinewebfonts.com/t/1627b9e37ec7087e1de5561238a04816.woff")
+      format("woff"),
+    url("//db.onlinewebfonts.com/t/1627b9e37ec7087e1de5561238a04816.ttf")
+      format("truetype"),
+    url("//db.onlinewebfonts.com/t/1627b9e37ec7087e1de5561238a04816.svg#Copperplate")
+      format("svg");
+}
+
+@font-face {
+  font-family: "TheGreatOutdoors-Rough-Regular";
+  src: url("path/GraublauWeb.otf") format("opentype");
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.container {
+  /*   display: grid; */
+  /*   grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr; */
+  /*   grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr; */
+  text-align: left;
+  /*   grid-gap: 1em; */
+  width: 100%;
+}
+
+.content {
+  max-width: 960px;
+  margin: 0 auto;
+}
+
+/* Style all font awesome icons */
+.fa {
+  padding: 10px;
+  margin-right: 15px;
+  margin-top: 10px;
+  font-size: 20px;
+  float: right;
+  width: 40px;
+  text-align: center;
+  text-decoration: none;
+  border-radius: 50%;
+}
+
+/* Add a hover effect */
+.fa:hover {
+  opacity: 0.7;
+}
+
+/* Set a specific color for each brand */
+
+/* Facebook */
+.fa-facebook {
+  background: #3b5998;
+  color: white;
+}
+
+/* Twitter */
+.fa-twitter {
+  background: #55acee;
+  color: white;
+}
+
+.fa-instagram {
+  background: #125688;
+  color: white;
+}
+
+.fa-youtube {
+  background: #ff0000;
+  color: white;
+}
+
+.home-headline-1A {
+  position: relative;
+  text-align: left;
+  left: 0px;
+  margin: 50px;
+  top: 20px;
+}
+
+.home-headline-1 {
+  position: relative;
+  text-align: left;
+  left: 0px;
+  margin: 50px;
+  top: 20px;
+}
+
+.home-headline-2 {
+  position: relative;
+  text-align: left;
+  left: 0px;
+  margin: 50px;
+  top: -10px;
+}
+
+.home-headline-3 {
+  position: relative;
+  text-align: left;
+  left: 0px;
+  margin: 50px;
+  top: -50px;
+}
+
+.home-headline-4 {
+  position: relative;
+  text-align: left;
+  left: 0px;
+  margin-left: 50px;
+  top: -70px;
+}
+
+.home-paragraph-1 {
+  position: relative;
+  text-align: left;
+  left: 0px;
+  margin-left: 50px;
+  padding-right: 50px;
+  margin-right: 50;
+  top: -10px;
+}
+
+.home-paragraph-2 {
+  position: relative;
+  text-align: left;
+  left: 0px;
+  margin: 50px;
+  top: -40px;
+}
+
+.home-paragraph-3 {
+  position: relative;
+  text-align: left;
+  left: 0px;
+  margin: 50px;
+  top: -70px;
+}
+
+.home-paragraph-4 {
+  position: relative;
+  text-align: left;
+  left: 0px;
+  margin: 50px;
+  top: -100px;
+}
+
+.meta {
+  color: #83110b;
+  position: absolute;
+  bottom: 20px;
+  left: 30px;
+}
+
+.meta2 {
+  position: absolute;
+  bottom: 20px;
+  left: 300px;
+}
+
+.social-footer {
+  position: fixed;
+  width: 100%;
+  height: 55px;
+  font-weight: 700;
+  left: 0;
+  bottom: 0;
+  background-color: #5e4b56;
+}
+
+@media screen and (max-width: 550px) {
+  .home-grid {
+    display: block;
+  }
+}
