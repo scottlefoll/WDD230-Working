@@ -51,6 +51,9 @@ fetch(apiURL)
     document.querySelector("#windSpeed").textContent = Math.round(data.wind.speed) +" mph";
   })
 
+  function myConfirm() {
+    confirm("Message sent! You should receive a response shortly.");
+  }
 
   // FORECAST API CALL
 // WORKING COPY 2!!!!!
