@@ -789,16 +789,17 @@ input[type=submit]:hover {
 }
 
 .social-widget {
-  margin-right: 10px;
+  /* margin-right: 10px; */
   border: none;
-  width: 600px;
+  width: 400px;
   position: relative;
   height: 73px;
   /* left: 20vw; */
   /* float: right; */
   /* top: 30px; */
-  bottom: -20px;
+  bottom: -15px;
   /* left: 3vw; */
+  left: 40vw;
   /* float: right; */
   /* background-color: black; */
   background-color: #F6D7B0;
