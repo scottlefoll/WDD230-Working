@@ -417,6 +417,7 @@ p {
   max-width: 960px;
   height: 350px;
   margin: 0 auto;
+  /* margin-bottom: 4vh; */
 }
 
 .banner-box img {
@@ -493,6 +494,7 @@ input[type=submit]:hover {
   width: 100%;
   max-width: 960px;
   margin: 0 auto;
+  margin-bottom: 100px;
 }
 
 .content {
@@ -512,7 +514,7 @@ input[type=submit]:hover {
 
 
 .home-container {
-  /* display: grid; */
+  display: block;
   grid-template-columns: 1fr 1fr 1fr;
   position: relative;
   font-family: "Varela Round", Helvetica, Arial, sans-serif;
@@ -520,7 +522,64 @@ input[type=submit]:hover {
   max-width: 960px;
   margin-left: 3rem;
   margin-right: 3rem;
-  top: -200px;
+  margin-top: 2rem;
+  top: -20vh;
+  text-align: center;
+}
+
+.rentals-container {
+  display: block;
+  grid-template-columns: 1fr 1fr 1fr;
+  position: relative;
+  font-family: "Varela Round", Helvetica, Arial, sans-serif;
+  margin: 0 auto;
+  max-width: 960px;
+  margin-left: 3rem;
+  margin-right: 3rem;
+  margin-top: 2rem;
+  top: -6vh;
+  text-align: center;
+}
+
+.reservations-container {
+  display: block;
+  grid-template-columns: 1fr 1fr 1fr;
+  position: relative;
+  font-family: "Varela Round", Helvetica, Arial, sans-serif;
+  margin: 0 auto;
+  max-width: 960px;
+  margin-left: 3rem;
+  margin-right: 3rem;
+  margin-top: 2rem;
+  top: -6vh;
+  text-align: center;
+}
+
+.tours-container {
+  display: block;
+  grid-template-columns: 1fr 1fr 1fr;
+  position: relative;
+  font-family: "Varela Round", Helvetica, Arial, sans-serif;
+  margin: 0 auto;
+  max-width: 960px;
+  margin-left: 3rem;
+  margin-right: 3rem;
+  margin-top: 2rem;
+  top: -7vh;
+  text-align: center;
+}
+
+.contact-container2 {
+  display: block;
+  grid-template-columns: 1fr 1fr 1fr;
+  position: relative;
+  font-family: "Varela Round", Helvetica, Arial, sans-serif;
+  margin: 0 auto;
+  max-width: 960px;
+  margin-left: 3rem;
+  margin-right: 3rem;
+  margin-top: 2rem;
+  top: -7vh;
   text-align: center;
 }
 
